@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Image Searcher</title>
 </head>
 <body>
     <div class="container">
-        <h1>Image Searcher</h1>
+        <h1 class="title">Image Searcher</h1>
 
         <div class="formWrapper">
             <form id="searchForm">
                 <input type="text" id="searchInput" placeholder="Search for images...">
-                <button id="searchBtn" type="submit">Search</button>
+                <div class="btnWrapper">
+                    <button id="searchBtn" type="submit">Search</button>
                 <button id="clearBtn" type="reset">Clear</button>
+                </div>
             </form>
         </div>
 
         <div id="imagesWrapper"> </div>
     </div>
+
 
 
 

@@ -10,6 +10,10 @@ runEventListeners();
 function runEventListeners() {
     serachForm.addEventListener('submit', searchImages);
     clearBtn.addEventListener('click', clearImages);
+    searchInput.addEventListener('click', function() {
+        this.value = '';
+    });
+
 }
 
 function searchImages(e) {
@@ -44,6 +48,7 @@ function displayImages(images) {
     images.forEach(image => {
         const imgDiv = document.createElement('div');
         imgDiv.attributes.class = 'imgDiv';
+        
 
         const img = document.createElement('img');
         img.src = image[1].urls.regular;
@@ -58,10 +63,7 @@ function displayImages(images) {
 }
 
 function clearImages() {
-    imagesWrapper.innerHTML = '';
-    Array.from(imagesWrapper.children).forEach(child => {
-        child.remove();
-    });
+    imagesWrapper.innerHTML = "";
     return 0;
 }
 
