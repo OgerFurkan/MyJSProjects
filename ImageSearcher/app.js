@@ -13,7 +13,6 @@ function runEventListeners() {
     searchInput.addEventListener('click', function() {
         this.value = '';
     });
-
 }
 
 function searchImages(e) {
@@ -44,8 +43,14 @@ async function fetchImages(searchTerm) {
 }
 
 function displayImages(images) {
+    console.log(images);
     let num=clearImages();
     images.forEach(image => {
+        const imgA = document.createElement('a');
+        imgA.href = image[1].urls.regular;
+        imgA.target = '_blank';
+        imgA.attributes.class = 'imgA';
+
         const imgDiv = document.createElement('div');
         imgDiv.attributes.class = 'imgDiv';
         
@@ -56,8 +61,9 @@ function displayImages(images) {
         img.attributes.class = 'img';
         img.attributes.id = `img${num}`;
 
+        imgA.appendChild(imgDiv);
         imgDiv.appendChild(img);
-        imagesWrapper.appendChild(imgDiv);
+        imagesWrapper.appendChild(imgA);
         num++;
     });
 }

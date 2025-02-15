@@ -82,5 +82,5 @@ body {
 }
 
 #imagesWrapper img:not(:hover) {
-    transition: height 0.5s, box-shadow 0.5s;
+    transition: height 0.25s, box-shadow 0.5s;
 }
