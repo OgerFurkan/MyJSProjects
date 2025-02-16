@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.currencyForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.currencyForm>* {
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.first>.firstAmount,
+.second>.secondAmount {
+    border: none;
+    font-weight: bold;
+
+}
+
+.first>.firstAmount:focus,
+.second>.secondAmount {
+    outline: none;
+}
+
+.first>.selectFirst,
+.second>.selectSecond {
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    padding-right: 10px;
+}
+
+.currencyForm>a {
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+}
+
+.btnWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnWrapper>* {
+    margin: 5px 5px;
+    padding: 10px;
+    width: 75px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btnWrapper>#submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btnWrapper>#reset {
+    background-color: #f44336;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    color: rgb(83, 82, 82);
+}
+
+.header>h1 {
+    margin: 10px;
+    font-weight: lighter;
+}
