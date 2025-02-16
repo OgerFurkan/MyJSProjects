@@ -13,7 +13,6 @@
 
 <body>
     <div class="container">
-        
         <div class="main">
             <div class="header">
                 <h1>DÖVİZ ÇEVİRİCİ</h1>
@@ -22,34 +21,39 @@
             <div class="formWrapper">
                 <form class="currencyForm">
                     <div class="first">
-                        <input type="number" class="firstAmount" placeholder="Miktar Giriniz">
+                        <input type="number" class="firstAmount" placeholder="Miktar Giriniz" autocomplete="off">
+                        <i class="fa-solid fa-dollar-sign"></i>
                         <select name="selectFirst" class="selectFirst">
                             <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
                             <option value="TRY">TRY</option>
                         </select>
                     </div>
-                    
-                    <a href="" class="exchange">
+
+                    <a class="exchange">
                         <i class="fa-solid fa-exchange"></i>
                     </a>
 
                     <div class="second">
                         <input type="number" class="secondAmount" placeholder="Sonuç" readonly>
+                        <i class="fa-solid fa-turkish-lira-sign"></i>
                         <select name="selectSecond" class="selectSecond">
                             <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
-                            <option value="TRY">TRY</option>
+                            <option value="TRY" selected>TRY</option>
                         </select>
                     </div>
                 </form>
             </div>
             <div class="btnWrapper">
-                <button class="submit" id="submit">Çevir</button>
-                <button class="reset" id="reset" >Temizle</button>
+                <button class="submit">Çevir</button>
+                <button class="reset">Temizle</button>
             </div>
         </div>
     </div>
+
+    <script src="currency.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

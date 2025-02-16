@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 
 }
 
@@ -64,6 +65,7 @@ body {
     border: none;
     font-size: 20px;
     color: black;
+    cursor: pointer;
 }
 
 .btnWrapper {
@@ -78,14 +80,15 @@ body {
     width: 75px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
-.btnWrapper>#submit {
+.btnWrapper>.submit {
     background-color: #4CAF50;
     color: white;
 }
 
-.btnWrapper>#reset {
+.btnWrapper>.reset {
     background-color: #f44336;
     color: white;
 }
