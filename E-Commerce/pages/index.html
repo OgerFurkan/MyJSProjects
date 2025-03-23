@@ -5,47 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Kitap Kurdu</title>
 </head>
 
 <body>
     <nav>
-        <div id="nav-left">
-            <a href="index.html">
-                <img src="../src/images/Logo.jpg" alt="Kitap Kurdu" width="100" height="100" style="border-radius: 50%;">
+       <div class="nav-top">
+        <div class="nav-left">
+            <a href="index.html" id="logo">
+                <img src="../src/images/Logo.jpg" alt="Kitap Kurdu" width="60" height="60" style="border-radius: 50%;">
             </a>
-            <p class="logo-name">Kitap Kurdu</p>
+            <a href="index.html">
+                <p class="logo-name">KİTAP KURDU</p>
+            </a>
+            
         </div>
 
-        </div>
         <div class="nav-middle">
-            <i><i class="fa-solid fa-magnifying-glass"></i></i>
+            <label for="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
             <input id="search-input" type="search" placeholder="Aradığınız kitap bilgisini giriniz..." autocomplete="off">
         </div>
-        <div class="nav-right">
-            <a href="login.html">Giriş Yap</a>
-            <a href="">Sepet</a>
+        <div class="nav-right">  
+            <a href="login.html" id="login">
+                <i class="fa-regular fa-user"></i>
+                Giriş Yap
+            </a>
+
+            <div class="vl"></div>
+
+            <a href="" id="cart"><i class="fa-solid fa-cart-shopping"></i>
+                <span class="number-of-product">1</span>Sepet
+            </a>
         </div>
-        <div class="nav-bottom">
-            <a href="">Anasayfa</a>
-            <a href="">Kitaplar</a>
-            <a href="">Yazarlar</a>
+       </div>
+         <div class="nav-bottom">
+            <a href="">ANASAYFA</a>
+            <div class="vl"></div>
+            <a href="">KİTAPLAR</a>
+            <div class="vl"></div>
+            <a href="">YAZARLAR</a>
         </div>
     </nav>
-    <hr>
     <main>
+
         <section id="ad-slider">
             <div class="slider-item">
-                <img src="" alt="Slider 1">
+                <i class="fa-regular fa-circle-left"></i>
+                <img src="../src/images/ad-discount-1200x390.jpg" alt="Slider 1">
+                <i class="fa-regular fa-circle-right"></i>
             </div>
-            <div class="slider-item">
-                <img src="" alt="Slider 2">
-            </div>
-            <div class="slider-item">
-                <img src="" alt="Slider 3">
-            </div>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle-dot"></i>
+            <i class="fa-solid fa-circle"></i>
         </section>
-        <hr>
+
         <section id="book-slider">
             <h2>En Çok Satanlar</h2>
             <i class="fa-solid fa-arrow-left" style="cursor: pointer;"></i>
@@ -96,7 +113,8 @@
             </div>
             <i class="fa-solid fa-arrow-right"></i>
         </section>
-            <hr>
+
+
     </main>
     <footer>
         <div class="footer-left">
