@@ -1,5 +1,5 @@
 main {
-    margin-top: 120px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,7 @@ main {
 }
 
 #ad-slider {
+    margin-top: 300px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,6 +19,7 @@ main {
 }
 
 .slider-item{
+    opacity: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,44 +27,69 @@ main {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
-    transition: 0.5s;
+    position: absolute;
+    transition: 0.5s ease;
+}
+
+.slider-item.visible{
+    opacity: 1;
 }
 
 .slider-item  img {
    border-radius: 10px;
+ 
 }
 
-.slider-item i{
+#ad-slider>i{
     font-size: 3em;
-    color: #bababa;
+    color: #53bd97;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.slider-item .fa-circle-right{
+#ad-slider .fa-circle-right{
     z-index: 999;
-    margin-left: -75px;
+    margin: 0 auto;
+    
 }
-.slider-item .fa-circle-left{
+#ad-slider .fa-circle-left{
     z-index: 999;
-    margin-right: -75px;
+    margin: 0 auto;
+    margin-right: 700px;
+  
 }
 
-.slider-item .fa-circle-right:hover, .slider-item .fa-circle-left:hover{
-    color: #fff;
-}
-
-#ad-slider .fa-circle, #ad-slider .fa-circle-dot{
-    font-size: 1.2em;
+#ad-slider .fa-circle-right:hover, #ad-slider .fa-circle-left:hover{
     color: #bababa;
+}
+
+#ad-slider .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 520px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+#ad-slider .dots .fa-circle, #ad-slider .dots .fa-circle-dot{
+    font-size: 1.2em;
+    color: #53bd97;
     cursor: pointer;
     margin: 0 10px;
     z-index: 999;
     margin-top: -75px;
+
 }
 
-#ad-slider .fa-circle:hover, #ad-slider .fa-circle-dot:hover{
-    color: #fff;
+#ad-slider .dots .fa-circle:hover, #ad-slider .dots .fa-circle-dot:hover{
+    color: #bababa;
+}
+
+#book-slider{
+    margin-top: 300px;
+    
 }
 
    
