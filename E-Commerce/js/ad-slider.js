@@ -4,10 +4,13 @@ const nextButton = document.querySelector('.fa-circle-right');
 const dots = document.querySelectorAll('.dots i');
 
 let currentIndex = 0;
+let scrollInterval;
+let scrollCooldown = false;
 
 
 
 runEvents();
+AutoScroll();
 
 function runEvents() {
     updateSlider();
@@ -37,20 +40,40 @@ function updateSlider() {
 }
 
 function prevSlide() {
+    if(scrollCooldown) return
+    scrollCooldown = true;
+
+    clearInterval(scrollInterval);
+    
     if(currentIndex > 0) {
         currentIndex--;
         updateSlider();
     } else {
-        
+        currentIndex = sliderItems.length - 1;
+        updateSlider();
     }
+    setTimeout(() => {
+        scrollCooldown = false;
+        AutoScroll();
+    }, 300);
 }
 function nextSlide() {
+    if(scrollCooldown) return
+    clearInterval(scrollInterval);
+
+    scrollCooldown = true;
     if(currentIndex < sliderItems.length - 1) {
         currentIndex++;
         updateSlider();
     } else {
-       
+        currentIndex = 0;
+        updateSlider();
     }
+    setTimeout(() => {
+        scrollCooldown = false;
+        AutoScroll();
+    }, 300);
+
 }
 
 function dotClick(e) {
@@ -58,6 +81,17 @@ function dotClick(e) {
     updateSlider();
 }
 
+function AutoScroll() {
+    if(scrollCooldown) return
+    scrollInterval = setInterval(() => {   
+        if(currentIndex < sliderItems.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider(); 
+    }, 2500); 
+}
 
 
 
