@@ -1,152 +1,126 @@
 <!DOCTYPE html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <title>Kitap Kurdu</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-       <div class="nav-top">
+      <div class="nav-top">
         <div class="nav-left">
-            <a href="index.html" id="logo">
-                <img src="../src/images/logos/Logo.jpg" alt="Kitap Kurdu" width="60" height="60" style="border-radius: 50%;">
-            </a>
-            <a href="index.html">
-                <p class="logo-name">KİTAP KURDU</p>
-            </a>
-            
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="60"
+              height="60"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">KİTAP KURDU</p>
+          </a>
         </div>
 
         <div class="nav-middle">
-            <label for="search-input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-            <input id="search-input" type="search" placeholder="Aradığınız kitap bilgisini giriniz..." autocomplete="off">
-        </div>
-        <div class="nav-right">  
-            <a href="login.html" id="login">
-                <i class="fa-regular fa-user"></i>
-                Giriş Yap
-            </a>
+          <label for="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Aradığınız kitap bilgisini giriniz..."
+            autocomplete="off"
+          />
 
-            <div class="vl"></div>
+          <div class="search-result"></div>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" id="login">
+            <i class="fa-regular fa-user"></i>
+            Giriş Yap
+          </a>
 
-            <a href="" id="cart"><i class="fa-solid fa-cart-shopping"></i>
-                <span class="number-of-product">1</span>Sepet
-            </a>
+          <div class="vl"></div>
+
+          <a href="" id="cart"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span class="number-of-product">1</span>Sepet
+          </a>
         </div>
-       </div>
-         <div class="nav-bottom">
-            <a href="">ANASAYFA</a>
-            <div class="vl"></div>
-            <a href="">KİTAPLAR</a>
-            <div class="vl"></div>
-            <a href="">YAZARLAR</a>
-        </div>
+      </div>
+      <div class="nav-bottom">
+        <a href="">ANASAYFA</a>
+        <div class="vl"></div>
+        <a href="">KİTAPLAR</a>
+        <div class="vl"></div>
+        <a href="">YAZARLAR</a>
+      </div>
     </nav>
     <main>
-        
-        <section id="ad-slider">
+      <section id="ad-slider">
+        <i class="fa-regular fa-circle-left"></i>
 
-            <i class="fa-regular fa-circle-left"></i>
+        <div class="slider-item">
+          <img
+            src="../src/images/ads/ad-discount-1200x390-1.jpg"
+            alt="Slider 1"
+          />
+        </div>
+        <div class="slider-item">
+          <img
+            src="../src/images/ads/ad-discount-1200x390-2.png"
+            alt="Slider 1"
+          />
+        </div>
+        <div class="slider-item">
+          <img
+            src="../src/images/ads/ad-discount-1200x390-3.png"
+            alt="Slider 1"
+          />
+        </div>
+        <div class="slider-item">
+          <img
+            src="../src/images/ads/ad-discount-1200x390-4.png"
+            alt="Slider 1"
+          />
+        </div>
 
-            <div class="slider-item">
-                <img src="../src/images/ads/ad-discount-1200x390-1.jpg" alt="Slider 1">  
-            </div>  
-            <div class="slider-item">
-                <img src="../src/images/ads/ad-discount-1200x390-2.png" alt="Slider 1">
-            </div>
-            <div class="slider-item" >
-                <img src="../src/images/ads/ad-discount-1200x390-3.png" alt="Slider 1">
-            </div>
-            <div class="slider-item">
-                <img src="../src/images/ads/ad-discount-1200x390-4.png" alt="Slider 1">  
-            </div>  
+        <i class="fa-regular fa-circle-right"></i>
 
-            <i class="fa-regular fa-circle-right"></i>
-
-            <div class="dots">
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle-dot" ></i>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle"></i>
-            </div>
-        </section>
-        <h1 class="book-title">
-            <i class="fa-solid fa-book"></i>
-           EN ÇOK SATILANLAR
-            <i class="fa-solid fa-book"></i>
-        </h1>
-    
-        <section id="book-slider">
-            <i class="fa-solid fa-arrow-left "></i>
-            <div class="book-slider-wrapper">
-                <div class="slider-item-book">
-                    <a href="">
-                    <img src="../src/images/books/book-nutuk-166x250.jpg" alt="Kitap 1">
-                    </a>
-                    <h3>Nutuk</h3>
-                    <h1>Mustafa Kemal Atatürk</h1>
-                    <p>İş Bankası</p>
-                    <button class="purchase">
-                    <span class="price">84 TL</span>
-                    <span class="add-to-cart">Sepete Ekle</span>
-                    </button>
-                </div>
-                <div class="slider-item-book">
-                    <a href="">
-                    <img src="../src/images/books/bilgiyle-sohbet.jpg" alt="Kitap 1">
-                    </a>
-                    <h3>Bilgiyle Sohbet</h3>
-                    <h1>A. M. Celal Şengör</h1>
-                    <p>İş Bankası</p>
-                    <button class="purchase">
-                    <span class="price">186 TL</span>
-                    <span class="add-to-cart">Sepete Ekle</span>
-                    </button>
-                </div>
-                <div class="slider-item-book">
-                    <a href="">
-                    <img src="../src/images/books/dahi-diktator.jpg" alt="Kitap 1">
-                    </a>
-                    <h3>Dahi Diktatör</h3>
-                    <h1>Celal Şengör</h1>
-                    <p>İnkılap</p>
-                    <button class="purchase">
-                    <span class="price">180 TL</span>
-                    <span class="add-to-cart">Sepete Ekle</span>
-                    </button>
-                </div>
-                <div class="slider-item-book">
-                    <a href="">
-                    <img src="../src/images/books/turlerin-kokeni.jpg" alt="Kitap 1">
-                    </a>
-                    <h3>Türlerin Kökeni</h3>
-                    <h1>Charles Darwin</h1>
-                    <p>Alfa Yayınları</p>
-                    <button class="purchase">
-                    <span class="price">321 TL</span>
-                    <span class="add-to-cart">Sepete Ekle</span>
-                    </button>
-                </div>
-            </div>
-            <i class="fa-solid fa-arrow-right"></i>
-        </section>
-            
-
-
-
+        <div class="dots">
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle-dot"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+        </div>
+      </section>
+      <h1 class="book-title">
+        <i class="fa-solid fa-book"></i>
+        EN ÇOK SATILANLAR
+        <i class="fa-solid fa-book"></i>
+      </h1>
+      <section id="book-slider">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="book-slider-wrapper"></div>
+        <i class="fa-solid fa-arrow-right"></i>
+      </section>
     </main>
+  </body>
 
-</body>
-
-<script src="../js/ad-slider.js"></script>
-<script src="../js/book-slider.js"></script>
-
+  <script src="../js/book-api.js"></script>
+  <script src="../js/nav-search.js"></script>
+  <script src="../js/ad-slider.js"></script>
+  <script src="../js/book-slider.js"></script>
 </html>
