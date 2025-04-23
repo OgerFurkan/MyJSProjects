@@ -60,6 +60,8 @@ async function DisplayBooks() {
             searchItem.classList.add("search-item");
         
             const a = document.createElement("a");
+            a.href= book.volumeInfo.infoLink;
+            a.target = "_blank";
         
             const img = document.createElement("img");
             if (book.volumeInfo.imageLinks) {

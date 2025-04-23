@@ -2,17 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookSlider = document.querySelector('.book-slider-wrapper');
     const prevArrow = document.querySelector('.fa-arrow-left');
     const nextArrow = document.querySelector('.fa-arrow-right');
+    const bestSellerRadio = document.getElementById("best-seller");
+    const newBooksRadio = document.getElementById("new-books");
+    const loadingSpinner = document.querySelector('.loader');
     const width = 370;
     const bookCount = 4;
-    let books;
 
-    let bestSellerBooks = ["Xdm0EAAAQBAJ","BKbkrQEACAAJ","8Q-SDwAAQBAJ","02uvzwEACAAJ"];
+    let bestSellerBooks = ["Xdm0EAAAQBAJ","8N50EAAAQBAJ","8Q-SDwAAQBAJ","n-ftAwAAQBAJ"];
+    let newBooks = ["BhFPEQAAQBAJ","viNOEQAAQBAJ","z4IOEQAAQBAJ","plP9EAAAQBAJ"];
+  
     const fetchBook = new BookAPI();
    
-    async function fetchBestSellerBooks() {
-        for (let i = 0; i < 4; i++) {
-            const promise = fetchBook.fetchBookByID(bestSellerBooks[i]);
-            let book= await promise;
+    async function fetchBooks(array) {
+        let fetchedBooks = [];
+        loadingSpinner.style.display = "block";
+
+        for(let i=0 ; i<4 ; i++){
+            const book = await fetchBook.fetchBookByID(array[i]);
+            fetchedBooks.push(book);
+        }
+
+        fetchedBooks.forEach(book => {
             const sliderItemBook = document.createElement("div");
             sliderItemBook.classList.add("slider-item-book");
         
@@ -43,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (book.saleInfo && book.saleInfo.listPrice) {
                 price.textContent = Math.floor(Number(book.saleInfo.listPrice.amount)) + " " + book.saleInfo.listPrice.currencyCode;
             } else {
-                price.textContent = i*10+10+ " " + "TRY";
+                price.textContent = "Stokta Yok";
+                price.style.color = "red";
             }
         
             const addToCart = document.createElement("span");
@@ -59,12 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderItemBook.appendChild(button);
             button.appendChild(price);
             button.appendChild(addToCart); 
-        }
+    });       
         books = document.querySelectorAll('.slider-item-book');
         cloneBooks();
+        bookSlider.scrollLeft = width * 4;
+        currentIndex = 4;
+        loadingSpinner.style.display = "none";
+        scrollCoolDown = false;
+        AutoScroll(); 
     }
 
-    fetchBestSellerBooks();
+    run();
+
+    bestSellerRadio.addEventListener("change", run);
+    newBooksRadio.addEventListener("change", run);  
+
+  function run(){
+        bookSlider.innerHTML = "";
+        if (bestSellerRadio.checked) {
+            fetchBooks(bestSellerBooks);
+        } else {
+            fetchBooks(newBooks);
+        }
+    }
 
     function cloneBooks() {
         books.forEach((book) => {
@@ -78,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-   
 
     let currentIndex =4;
     bookSlider.scrollLeft = width * currentIndex;
@@ -89,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     AutoScroll();
 
     function AutoScroll() {
+        clearInterval(scrollInterval);
         scrollInterval = setInterval(() => {
             if (scrollCoolDown) return;
 
@@ -155,7 +183,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     });
 });
-
-
-
-   

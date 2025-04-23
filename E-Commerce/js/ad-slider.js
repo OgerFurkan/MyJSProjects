@@ -90,7 +90,7 @@ function AutoScroll() {
             currentIndex = 0;
         }
         updateSlider(); 
-    }, 2500); 
+    }, 3000); 
 }
 
 

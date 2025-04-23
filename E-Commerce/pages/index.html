@@ -71,7 +71,12 @@
     <main>
       <section id="ad-slider">
         <i class="fa-regular fa-circle-left"></i>
-
+        <div class="slider-item">
+          <img
+            src="../src/images/ads/ad-discount-1200x390-3.png"
+            alt="Slider 1"
+          />
+        </div>
         <div class="slider-item">
           <img
             src="../src/images/ads/ad-discount-1200x390-1.jpg"
@@ -81,12 +86,6 @@
         <div class="slider-item">
           <img
             src="../src/images/ads/ad-discount-1200x390-2.png"
-            alt="Slider 1"
-          />
-        </div>
-        <div class="slider-item">
-          <img
-            src="../src/images/ads/ad-discount-1200x390-3.png"
             alt="Slider 1"
           />
         </div>
@@ -106,17 +105,92 @@
           <i class="fa-solid fa-circle"></i>
         </div>
       </section>
-      <h1 class="book-title">
-        <i class="fa-solid fa-book"></i>
-        EN ÇOK SATILANLAR
-        <i class="fa-solid fa-book"></i>
-      </h1>
+
+      <hr>
+
+      <div id="book-slider-title">
+        <input
+          type="radio"
+          id="best-seller"
+          name="option"
+          value="bestSeller"
+          checked
+        />
+        <label for="best-seller">Çok Satanlar</label>
+        <div class="vl"></div>
+
+        <input type="radio" id="new-books" name="option" value="newBooks" />
+        <label for="new-books">Yeni Kitaplar</label>
+      </div>
+      <span class="loader"></span>
       <section id="book-slider">
         <i class="fa-solid fa-arrow-left"></i>
         <div class="book-slider-wrapper"></div>
         <i class="fa-solid fa-arrow-right"></i>
       </section>
+
+      <hr>
+
+      
+      <section id="authors">
+       <h2>Başlıca Yazarlar</h2>
+       <div class="author-bottom">
+        <div class="author-item">
+          <img src="../src/images/authors/author-1.jpg" alt="Author 1" />
+          <p>Stefan Zweig</p>
+        </div>
+        <div class="vl"></div>
+        <div class="author-item">
+          <img src="../src/images/authors/author-2.jpg" alt="Author 2" />
+          <p>Fyodor Dostoevsky</p>
+        </div>
+        <div class="vl"></div>
+        <div class="author-item">
+          <img src="../src/images/authors/author-3.jpg" alt="Author 3" />
+          <p>Agatha Christie</p>
+        </div>
+        <div class="vl"></div>
+        <div class="author-item">
+          <img src="../src/images/authors/author-4.jpg" alt="Author 4" />
+          <p>George Orwell</p>
+        </div>
+       </div> 
+      </section>
     </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-left">
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="40"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">Kitap Kurdu</p>
+          </a>
+        </div>
+        <div class="vl"></div>
+        <div class="footer-right">
+          <a href=""> İletişim</a>
+          <div class="vl"></div>
+          <a href=""> Hakkımızda</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kitap Kurdu. Tüm hakları saklıdır.</p>
+    </footer>
+    <div class="to-up">
+      <a href="#">
+        <i class="fa-solid fa-up-long"></i>
+      </a>
+      <p>Başa Dön</p>
+    </div>
+
+   
   </body>
 
   <script src="../js/book-api.js"></script>

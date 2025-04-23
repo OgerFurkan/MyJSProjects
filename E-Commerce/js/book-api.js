@@ -1,7 +1,5 @@
 class BookAPI {
     constructor() {
-        this.searchInput = document.querySelector("#search-input");
-        this.searchIcon = document.querySelector(".fa-magnifying-glass");
         this.BASEurl = "https://www.googleapis.com/books/v1/volumes?q=";
         this.urlID = "https://www.googleapis.com/books/v1/volumes/";
     }
