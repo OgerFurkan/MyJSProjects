@@ -27,10 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderItemBook.classList.add("slider-item-book");
         
             const a = document.createElement("a");
+            a.href = "book.html?id=" + book.id;
             
             const img = document.createElement("img");
             if (book.volumeInfo.imageLinks) {
-                img.src = book.volumeInfo.imageLinks.thumbnail;
+                img.src = book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail;
             }
             else {
                 img.src = "../src/images/logos/logo.jpg";
@@ -51,14 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const price = document.createElement("span");
             price.classList.add("price");
             if (book.saleInfo && book.saleInfo.listPrice) {
-                price.textContent = Math.floor(Number(book.saleInfo.listPrice.amount)) + " " + book.saleInfo.listPrice.currencyCode;
+                price.textContent = book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode;
             } else {
                 price.textContent = "Stokta Yok";
                 price.style.color = "red";
             }
         
             const addToCart = document.createElement("span");
-            addToCart.classList.add("add-to-cart"); 
+            addToCart.classList.add("to-cart"); 
             addToCart.textContent = "Sepete Ekle";
             
             bookSlider.appendChild(sliderItemBook);
@@ -105,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             bookSlider.prepend(toFirst);
         }
     }
-
 
     let currentIndex =4;
     bookSlider.scrollLeft = width * currentIndex;

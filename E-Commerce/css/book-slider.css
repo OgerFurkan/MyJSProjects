@@ -1,0 +1,198 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#book-slider-title {
+    width: 1200px;
+    margin-top: 55px;
+    z-index: 998;
+    border: 1px solid #53bd97;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #53bd97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px #53bd97;
+}
+
+#book-slider-title .vl {
+    border-left: 1px solid #fff;
+    height: 50px;
+    margin: 0 20px;
+}
+
+#book-slider-title input {
+    display: none;
+}
+
+#book-slider-title label {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 40px;
+    padding: 10px 50px;
+    border-radius: 150px 150px 100px 100px;
+    background-color: rgba(0, 0, 0, 0.233);
+    color: #fff;
+    box-sizing: border-box;
+    transition: all 0.1s;
+    border-style: solid;
+    border-width: 15px 8px 2px 8px; 
+    border-color: transparent;
+    box-shadow: 0 6px 0px black, 0 10px 15px rgba(0,0,0,0.2);
+    min-height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#book-slider-title input:not(:checked) + label:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4), 
+                inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.651);
+    border-radius: 150px 150px 100px 100px;
+   
+}
+
+#best-seller:checked + label,
+#new-books:checked + label {
+    background-color: #fff;
+    color: #53bd97;
+    transform: translateY(2px);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4), 
+                inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+                0 2px 2px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 150px 150px 100px 100px;
+}
+ #book-slider{
+     margin-top: 50px;
+     width: 1440px;
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-self: center;
+     align-items: center;
+     transition: transform 0.5s ease;
+ }
+ .book-slider-wrapper {
+     width: 120%;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     flex-direction: row;
+     gap: 20px;
+     overflow-x: auto;
+     scroll-behavior: auto ;
+     border-radius: 5px;
+     padding:20px;
+ }
+ 
+ 
+ .book-slider-wrapper::-webkit-scrollbar {
+     display: none;
+ }
+ 
+ #book-slider .fa-arrow-right, #book-slider .fa-arrow-left{
+     font-size: 3em;
+     color: #fff;
+     cursor: pointer;
+     transition: 0.5s;
+     z-index: 999;
+     background-color: #53bd97;
+     box-shadow: 0 0 20px #53bd97;
+     border-radius: 50%;
+     padding: 10px;
+ }
+ 
+ #book-slider .fa-arrow-right:hover, #book-slider .fa-arrow-left:hover{
+     color: #bababa;
+ }
+ #book-slider .fa-arrow-right{
+     margin-left: 100px;
+ }
+ #book-slider .fa-arrow-left{
+     margin-right: 100px;
+ }
+ 
+ .slider-item-book{
+     flex: 0 0 auto;
+     width: 350px;
+     height: 550px;
+     border: 1px solid #53bd97;
+     border-radius: 20px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+     flex-wrap: wrap;
+     position: relative;
+     transition: 0.5s ease;
+     cursor: pointer;
+ }
+ 
+ .slider-item-book:hover{
+     box-shadow: 0 0 30px #53bd97;
+     transition: 0.5s ease;
+ }
+ 
+ .slider-item-book img {
+    border: 1px solid rgba(0,0,0,0.1);
+     width: 200px;
+     height: 300px;
+     border-radius: 10px;
+     transition: 0.5s ease;
+ }
+ .slider-item-book:hover img {
+     transform: scale(1.1);
+     transition: 0.5s ease;
+ }
+ .slider-item-book h3 {
+     font-size: 2em;
+     color: black;
+     text-align: center;
+     margin-bottom: 5px;
+ }
+ .slider-item-book h1 {
+     font-size: 1.5em;
+     color: black;
+     text-align: center;
+     margin-bottom: 5px;
+     font-weight: 400;
+ }
+ .slider-item-book button {
+     width: 75%;
+     height: 40px;
+     background-color: #53bd97;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     font-size: 1.2em;
+     cursor: pointer;
+     transition: 0.5s ease;
+ }
+ 
+ .slider-item-book button:hover {
+     background-color: #bababa;
+     color: black;
+     transition: 0.5s ease;
+ }
+ 
+ .slider-item-book button:hover .price {
+     display: none;
+ }
+ .slider-item-book button .to-cart {
+     display: none;
+ }
+ .slider-item-book button:hover .to-cart {
+     display: block;
+     color: black;
+ }

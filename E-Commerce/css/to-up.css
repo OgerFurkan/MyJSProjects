@@ -1,0 +1,38 @@
+.to-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 200px;
+    right: 100px;
+    z-index: 999;
+}
+
+.to-up p{
+    font-size: 1.1em;
+    color: black;
+    margin-top: 5px;
+    text-align: center;
+   
+}
+
+.to-up a{
+background-color: #53bd97;
+border-radius: 50%;
+text-decoration: none;
+color: white;
+font-size: 2em;
+padding: 15px 20px;
+border: 1px solid black;
+}
+
+.to-up:hover a{
+    background-color: #bababa;
+    color: black;
+    transition: 0.5s ease;
+}
+.to-up:hover p{
+    color: #bababa;
+    transition: 0.5s ease;
+}

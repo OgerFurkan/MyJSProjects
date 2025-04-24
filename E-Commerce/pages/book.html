@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/book-slider.css" />
+    <link rel="stylesheet" href="../css/to-up.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-top">
+        <div class="nav-left">
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="60"
+              height="60"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">KİTAP KURDU</p>
+          </a>
+        </div>
+
+        <div class="nav-middle">
+          <label for="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Aradığınız kitap bilgisini giriniz..."
+            autocomplete="off"
+          />
+
+          <div class="search-result"></div>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" id="login">
+            <i class="fa-regular fa-user"></i>
+            Giriş Yap
+          </a>
+
+          <div class="vl"></div>
+
+          <a href="" id="cart"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span class="number-of-product">1</span>Sepet
+          </a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <a href="index.html">ANASAYFA</a>
+        <div class="vl"></div>
+        <a href="">KİTAPLAR</a>
+        <div class="vl"></div>
+        <a href="">KATEGORİLER</a>
+      </div>
+    </nav>
+    <main>
+      <div class="book-container">
+            <div class="book-left">
+                <img src="" alt="" class="book-image"/>
+                <hr>
+                <div class="book-info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-user"></i>
+                            <span class="book-info-title">Yazar:</span>
+                            <span class="book-info-value"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-users"></i>
+                            <span class="book-info-title">Yayınevi:</span>
+                            <span class="book-info-value"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="book-info-title">Yayın Tarihi:</span>
+                            <span class="book-info-value"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-book"></i>
+                            <span class="book-info-title">Sayfa Sayısı:</span>
+                            <span class="book-info-value"></span>
+                        </li>
+                       
+                        <li>
+                            <i class="fa-solid fa-language"></i>
+                            <span class="book-info-title">Dil:</span>
+                            <span class="book-info-value">Türkçe</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bookmark"></i>
+                            <span class="book-info-title">ISBN:</span>
+                            <span class="book-info-value"></span>
+                        </li>    
+                        <li>
+                            <i class="fa-solid fa-tags"></i>
+                            <span class="book-info-title">Kategori:</span>
+                            <span class="book-info-value"></span>
+                        </li>     
+                       
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="book-info-title">Puan:</span>
+                            <span class="book-info-value"></span>    
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+
+            <div class="book-right">
+                <h1 class="book-title"><h1>
+                <h2 class="book-author"></h2>
+                <h3 class="book-category"></h3>
+                <p class="book-publisher"></p>
+                
+                <span class="book-rating"></span>
+                <h1 class="book-price"></h1>   
+                <div class="buttons">
+                    <a class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Sepete Ekle</a>
+                    <a class="g-play-link">
+                    <i class="fa-brands fa-google-play"></i> G-Play Books</a>
+                </div>
+                <div class="description-container">
+                    <p class="description-title">Kitap Açıklaması</p>
+                    <p class="book-description">
+                    </p>
+                </div>
+            </div>
+      </div>
+
+
+
+      <div id="book-slider-title">
+        <input
+          type="radio"
+          id="best-seller"
+          name="option"
+          value="bestSeller"
+          checked
+        />
+        <label for="best-seller">Çok Satanlar</label>
+        <div class="vl"></div>
+
+        <input type="radio" id="new-books" name="option" value="newBooks" />
+        <label for="new-books">Yeni Kitaplar</label>
+      </div>
+      <span class="loader"></span>
+      <section id="book-slider">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="book-slider-wrapper"></div>
+        <i class="fa-solid fa-arrow-right"></i>
+      </section>
+    
+    </main>
+    <hr>
+    
+    <footer>
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="index.html" id="logo">
+              <img
+                src="../src/images/logos/Logo.jpg"
+                alt="Kitap Kurdu"
+                width="40"
+                style="border-radius: 50%"
+              />
+            </a>
+            <a href="index.html">
+              <p class="logo-name">Kitap Kurdu</p>
+            </a>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-right">
+            <a href=""> İletişim</a>
+            <div class="vl"></div>
+            <a href=""> Hakkımızda</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Kitap Kurdu. Tüm hakları saklıdır.</p>
+    </footer>
+    
+
+    <div class="to-up">
+        <a href="#">
+          <i class="fa-solid fa-up-long"></i>
+        </a>
+        <p>Başa Dön</p>
+      </div>
+
+
+    <script src="../js/book-api.js"></script>
+    <script src="../js/nav-search.js"></script>
+    <script src="../js/book.js"></script>
+    <script src="../js/book-slider.js"></script>
+  </body>
+</html>

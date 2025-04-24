@@ -1,0 +1,314 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+hr {  
+    margin: 20px auto;
+    border: 1px solid #bababa;
+    width: 50%;
+    border-radius: 10px;
+}
+.book-container{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 150px;
+    padding: 20px;
+    border-top: 1px solid #bababa;
+}
+
+.book-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.book-left img{
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 300px;
+}
+
+.book-info{
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+}
+.book-info ul{
+    list-style-type: none;
+    padding: 0;
+}
+.book-info ul li{
+    font-size: 1em;
+    margin-bottom: 15px; 
+    color:black;
+}
+.book-info ul li i{
+    color: #53bd97;
+}
+.book-info ul li .book-info-title{
+    font-weight: bold;
+
+}
+
+.book-info ul li .book-info-value{
+    font-weight: 100;
+    color: black;
+    margin-left: 5px;
+}
+
+
+.book-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.book-title{
+    font-size: 3.5em;
+    margin-bottom: 10px; 
+    color: #53bd97; 
+    
+}
+.book-author{
+    font-size: 2.5em;
+    margin-bottom: 10px; 
+}
+
+.book-category{
+    font-size: 1.5em;
+    margin-bottom: 10px; 
+}
+
+.book-publisher{
+    font-size: 1em;
+    font-weight: 100;
+    margin-bottom: 10px; 
+}
+.book-rating{
+    font-size: 1.5em;
+    margin-bottom: 10px; 
+}
+.book-rating i{
+    color: #f9b233;
+    margin-right: 5px;
+    
+}
+
+.book-price{
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 10px; 
+    border-bottom: 1px solid #bababa;
+    border-top: 1px solid #bababa;
+    padding: 10px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.add-to-cart{
+    width: 49%;
+    text-align: center;
+    background-color: #53bd97;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+.add-to-cart:hover{
+    background-color: #bababa;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.g-play-link{
+    width: 50%;
+    text-align: center;
+    background-color: #53bd97;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+.g-play-link:hover{
+    background-color: #bababa;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.description-container{
+    border-radius: 15px;
+    margin-top: 20px;
+    max-width: 100%;
+    color: black;
+    font-size: 1.2em;   
+    border: 12x solid #53bd97;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    min-width: 400px;
+    border: 1px solid #f9f9f9;
+}
+
+.description-title{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 0; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #53bd97;
+    color: white;
+}
+
+.book-description{
+    padding: 20px;
+    font-size: 1em;
+    text-indent: 2em;
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.book-description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.book-description::-webkit-scrollbar-thumb {
+    background-color: #11573b;
+    border-radius: 10px;
+}
+
+.book-description::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
+
+#book-slider-title{
+    width: 50%;
+    margin: 0 auto;
+}
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #53bd97;
+    margin-top: 100px;
+    position: absolute;
+    z-index: 1000;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #53bd97;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+ 
