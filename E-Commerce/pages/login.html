@@ -1,11 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    LOGİNE GELDİK
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap - Kitap Yurdu</title>
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav-top">
+        <div class="nav-left">
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="60"
+              height="60"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">KİTAP KURDU</p>
+          </a>
+        </div>
+
+        <div class="nav-middle">
+          <label for="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Aradığınız kitap bilgisini giriniz..."
+            autocomplete="off"
+          />
+
+          <div class="search-result"></div>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" id="login">
+            <i class="fa-regular fa-user"></i>
+            Giriş Yap
+          </a>
+
+          <div class="vl"></div>
+
+          <a href="" id="cart"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span class="number-of-product">1</span>Sepet
+          </a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <a href="index.html">ANASAYFA</a>
+        <div class="vl"></div>
+        <a href="books.html">KİTAPLAR</a>
+        <div class="vl"></div>
+        <a href="categories.html">KATEGORİLER</a>
+      </div>
+    </nav>
+
+   
+
+    <main>
+
+      <div class="login-container">
+
+        <div class="login-form">   
+          <h1>Giriş Yap</h1>
+          <div class="links">
+            <div class="link"><a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="link">
+              <a href="" class="google"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <div class="link"><a href="" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            
+          </div>
+          <p class="or">veya hesabını kullan</p>
+          <form action="">
+            <div class="input-container">
+              <input type="email" id="email" placeholder="Email" required 
+              />
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Şifre" required />
+            </div>
+            <button type="submit">Giriş Yap</button>
+          </form>
+          <p class="forgot-password">Şifreni mi unuttun?</p>
+        </div>
+
+        <div class="blocker">
+          <div class="sign-in-div">
+            <img src="../src/images/logos/Logo.jpg" class="logo" alt="">
+            <h1>Tekrar Hoş Geldin!</h1>
+            <p class="sign-in-text">Hesabına giriş yap ve kitap dünyasına katıl!</p>
+            <label for="sign-in">Giriş Yap</label>
+            <input type="radio" id="sign-in" name="sign" checked />
+          </div>
+
+          <div class="sign-up-div">
+            <img src="../src/images/logos/Logo.jpg" class="logo" alt="">
+            <h1>Üye Ol!</h1>
+            <p class="sign-up-text">Kitap dünyasına katılmak için üye ol!</p>
+            <label for="sign-up">Üye Ol</label>
+            <input type="radio" id="sign-up" name="sign"/>
+          </div>
+        </div>
+
+
+        <div class="sign-up-form">
+          <h1>Hesap Oluştur</h1>
+          <div class="links">
+            <div class="link"><a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="link">
+              <a href="" class="google"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <div class="link"><a href="" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            
+          </div>
+          <p class="or">veya email adresinle üye ol</p>
+          <form action="">
+            <div class="input-container">
+              <input type="text" id="name" placeholder="İsim" required />
+            </div>
+            <div class="input-container">
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Şifre" required />
+            </div>
+            <button type="submit">Üye Ol</button>
+
+
+        </div>
+      </div>
+
+    </main>
+
+
+
+    <footer>
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="index.html" id="logo">
+              <img
+                src="../src/images/logos/Logo.jpg"
+                alt="Kitap Kurdu"
+                width="40"
+                style="border-radius: 50%"
+              />
+            </a>
+            <a href="index.html">
+              <p class="logo-name">Kitap Kurdu</p>
+            </a>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-right">
+            <a href=""> İletişim</a>
+            <div class="vl"></div>
+            <a href=""> Hakkımızda</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Kitap Kurdu. Tüm hakları saklıdır.</p>
+    </footer>
+  
+    <script src="../js/login.js"></script>
+  </body>
 </html>

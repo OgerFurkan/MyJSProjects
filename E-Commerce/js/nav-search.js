@@ -116,6 +116,16 @@ async function DisplayBooks() {
         searchResult.style.display = "flex";
 };
 
+const links = document.querySelectorAll(".nav-bottom a");
+const currentUrl = window.location.href;
+links.forEach((link) => {
+    if (link.href === currentUrl) {
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
 });
+});
+
 
 

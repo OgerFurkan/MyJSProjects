@@ -76,11 +76,11 @@ main {
 }
 
 #ad-slider .fa-circle-right{
-    z-index: 1002;
+    z-index: 999;
     margin: 0 auto;
 }
 #ad-slider .fa-circle-left{
-    z-index: 1002;
+    z-index: 999;
     margin: 0 auto;
     margin-right: 700px;
   
@@ -208,6 +208,7 @@ main {
 #authors{
     width: 60%;
     margin-top: 50px;
+    margin-bottom: 50px;
     z-index: 998;
     display: flex;
     justify-content: center;

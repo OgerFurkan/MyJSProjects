@@ -189,7 +189,6 @@ hr {
     border: 12x solid #53bd97;
     box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
     min-width: 400px;
-    border: 1px solid #f9f9f9;
 }
 
 .description-title{
@@ -212,7 +211,7 @@ hr {
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 350px;
-    max-height: 350px;
+    max-height: 30px;
 }
 
 .book-description::-webkit-scrollbar {
