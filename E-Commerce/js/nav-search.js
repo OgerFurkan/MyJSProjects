@@ -3,8 +3,7 @@ const getBooks = new BookAPI();
 const searchInput = document.querySelector("#search-input");
 const searchIcon = document.querySelector(".fa-magnifying-glass");
 const searchResult = document.querySelector(".search-result");
-
-run();
+const bookLink = document.querySelector(".bookLink");
 
 function run() {
     searchInput.addEventListener("input", handleDisplay);
@@ -121,10 +120,16 @@ const currentUrl = window.location.href;
 links.forEach((link) => {
     if (link.href === currentUrl) {
         link.classList.add("active");
-    } else {
+    }
+    else if (window.location.pathname.endsWith("book.html")) {
+        links[2].classList.add("active");
+    }
+    else {
         link.classList.remove("active");
     }
 });
+
+run();
 });
 
 

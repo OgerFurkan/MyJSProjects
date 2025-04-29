@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/author.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-top">
+        <div class="nav-left">
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="60"
+              height="60"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">KİTAP KURDU</p>
+          </a>
+        </div>
+
+        <div class="nav-middle">
+          <label for="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Aradığınız kitap bilgisini giriniz..."
+            autocomplete="off"
+          />
+
+          <div class="search-result"></div>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" id="login">
+            <i class="fa-regular fa-user"></i>
+            Giriş Yap
+          </a>
+
+          <div class="vl"></div>
+
+          <a href="cart.html" id="cart"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span class="number-of-products">1</span>Sepet
+          </a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <a href="index.html">ANASAYFA</a>
+        <div class="vl"></div>
+        <a href="categories.html">KATEGORİLER</a>
+        <div class="vl"></div>
+        <a class="bookLink" href="book.html?id=1">KİTAPLAR</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="author-container">
+        <hr>
+        <div class="top">
+          <div class="author-image">
+            <img src="../src/images/authors/author-1.jpg" alt="Author" />
+          </div>
+          <div class="author-name">Stefan Zweig</div>
+          <div class="author-birth-date">1881 - 1942</div>
+          <div class="description-container">
+            <p class="description-title">Yazar Hayatı</p>
+            <p class="author-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, cumque, voluptates, quibusdam voluptatum
+              exercitationem quos quisquam voluptatibus, cumque, voluptates,
+              quibusdam voluptatum exercitationem quos 
+            </p>
+        </div>
+        </div>
+        <hr>
+        <div class="bottom">
+          
+          <h2>Yazarın Kitapları</h2>
+          <div class="author-books">
+            <div class="author-book">
+              <a href="book.html?id=Xdm0EAAAQBAJ">
+                <img src="" />
+              </a>
+              <h3>Nutuk</h3>
+              <h1>Mustafa Kemal ATATÜRK</h1>
+              <p>İz Bırakan Kalemler Yayınevi</p>
+              <button class="purchase">
+                <span class="price">66 TRY</span>
+                <span class="to-cart">Sepete Ekle</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </main>
+    
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-left">
+          <a href="index.html" id="logo">
+            <img
+              src="../src/images/logos/Logo.jpg"
+              alt="Kitap Kurdu"
+              width="40"
+              style="border-radius: 50%"
+            />
+          </a>
+          <a href="index.html">
+            <p class="logo-name">Kitap Kurdu</p>
+          </a>
+        </div>
+        <div class="vl"></div>
+        <div class="footer-right">
+          <a href=""> İletişim</a>
+          <div class="vl"></div>
+          <a href=""> Hakkımızda</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kitap Kurdu. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="../js/book-api.js"></script>
+    <script src="../js/nav-search.js"></script>
+    <script src="../js/author.js"></script>
+
+  </body>
+</html>

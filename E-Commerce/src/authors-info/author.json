@@ -1,0 +1,55 @@
+{
+    "authors": [
+      {
+        "id": 0,
+        "name": "Stefan Zweig",
+        "birthDate": "1881",
+        "deathDate": "1942",
+        "image": "../src/images/authors/author-1.jpg",
+        "bio": "Stefan Zweig, 1881 yılında Viyana’da doğmuş, 1942’de Brezilya’da intihar ederek yaşamına son vermiş Avusturyalı bir yazardır. Yahudi kökenli bir aileden gelen Zweig, edebiyata genç yaşta ilgi duymuş, Avrupa’nın önemli düşünürleriyle yakın ilişkiler kurmuştur. Birinci Dünya Savaşı’nda barış yanlısı tutum sergilemiş, Nazizmin yükselmesiyle ülkesini terk ederek sürgün hayatı yaşamıştır. Zweig, insan ruhunun derinliklerine inen psikolojik anlatımı ve savaş karşıtı düşünceleriyle tanınır. En bilinen eserleri arasında Satranç, Bir Kadının Yaşamından 24 Saat ve Bilinmeyen Bir Kadının Mektubu yer alır. Avrupa’nın içine düştüğü karanlığa duyduğu umutsuzluk, onu eşiyle birlikte intihara sürüklemiştir.",
+        "books": [
+          "n-ftAwAAQBAJ",
+          "u5rsDwAAQBAJ",
+          "mC6ADQAAQBAJ",
+          "b8d-DQAAQBAJ",
+          "oW6nEAAAQBAJ",
+          "9aI9CgAAQBAJ"
+        ]
+      },
+
+      {
+        "id": 1,
+        "name": "Fyodor Dostoyevski",
+        "birthDate": "1821",
+        "deathDate": "1881",
+        "image": "../src/images/authors/author-2.jpg",
+        "bio": "Fyodor Dostoyevski, 1821 yılında Moskova’da doğmuş, 1881 yılında St. Petersburg’da hayatını kaybetmiş önemli bir Rus yazardır. Genç yaşta yazarlığa başlayan Dostoyevski, siyasi faaliyetleri nedeniyle tutuklanmış, idam cezasına çarptırılmış ancak son anda cezası sürgün ve zorunlu askerlik ile değiştirilmiştir. Bu zorlu yıllar, onun edebi kişiliğini ve insan ruhuna dair derin gözlemlerini şekillendirmiştir. Dostoyevski, eserlerinde insan psikolojisi, ahlaki ikilemler, inanç, suç ve özgür irade gibi konuları işler. Suç ve Ceza, Karamazov Kardeşler, Budala ve Yeraltından Notlar en bilinen romanları arasında yer alır. Düşünsel derinliği ve karakter analizleriyle dünya edebiyatının en etkili yazarlarından biri kabul edilir.",
+        "books": [
+          "eUflAwAAQBAJ",
+          "xkjlAwAAQBAJ",
+          "pfZxEAAAQBAJ",
+          "NGkKCgAAQBAJ",
+          "lIchEQAAQBAJ",
+          "KUXlAwAAQBAJ"
+        ]
+      },
+
+      {
+        "id": 2,
+        "name": "George Orwell",
+        "birthDate": "1903",
+        "deathDate": "1950",
+        "image": "../src/images/authors/author-4.jpg",  
+        "bio": "George Orwell, 1903 yılında Hindistan’da doğmuş, 1950 yılında Londra’da hayatını kaybetmiş İngiliz yazar ve gazetecidir. Asıl adı Eric Arthur Blair olan Orwell, sömürge memurluğu yaptıktan sonra yazarlığa yönelmiş, yaşamı boyunca yoksulluk, adaletsizlik ve otoriter rejimlere karşı mücadele etmiştir. Orwell, özellikle totaliter rejimleri eleştiren eserleriyle tanınır. En bilinen kitapları Hayvan Çiftliği ve 1984, baskıcı yönetimlerin insan özgürlüğüne etkilerini çarpıcı biçimde ortaya koyar. Dili sade, mesajı güçlü olan eserleri, günümüzde hâlâ politik eleştirinin temel kaynakları arasında yer alır.",
+        "books": [
+          "ilnlAwAAQBAJ",
+          "k2AyCgAAQBAJ",
+          "hfZxEAAAQBAJ",
+          "BeV3DQAAQBAJ",
+          "0fZxEAAAQBAJ",
+          "k1s3EAAAQBAJ"
+        ]
+      }
+    ]
+  }
+  

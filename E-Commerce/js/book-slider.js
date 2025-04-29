@@ -182,4 +182,5 @@ document.addEventListener('DOMContentLoaded', () => {
             AutoScroll();
         }, 300);
     });
+
 });

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const bookId = urlParams.get('id');
 
     const fetchDetails= new BookAPI();
+    
 
     const bookImg = this.querySelector(".book-image");
     const infoValues = document.querySelectorAll(".book-info-value");
@@ -17,12 +18,11 @@ document.addEventListener("DOMContentLoaded", function (){
 
     async function getDetails() {
         const bookDetails =  await fetchDetails.fetchBookByID(bookId);
-        console.log(bookDetails);
-
+        console.log(bookId);
         document.title = bookDetails.volumeInfo.title + " - Kitap Kurdu";
 
         if (bookDetails.volumeInfo.imageLinks) {
-            bookImg.src = bookDetails.volumeInfo.imageLinks.extraLarge || bookDetails.volumeInfo.imageLinks.large || bookDetails.volumeInfo.imageLinks.medium
+            bookImg.src = bookDetails.volumeInfo.imageLinks.extraLarge || bookDetails.volumeInfo.imageLinks.large || bookDetails.volumeInfo.imageLinks.medium|| bookDetails.volumeInfo.imageLinks.thumbnail || bookDetails.volumeInfo.imageLinks.smallThumbnail;
         } else {
             bookImg.src = "../src/images/logos/logo.jpg";
         }
@@ -66,13 +66,14 @@ document.addEventListener("DOMContentLoaded", function (){
         else {
             let pageCount = bookDetails.volumeInfo.pageCount;
             let rate=pageCount%10;
+            let randomNum = pageCount.toString()[0];
             if(rate<3){
                 rate=3;
             }
             else if(rate>5){
                 rate=5;
+                randomNum="0";
             }
-            let randomNum = pageCount.toString()[0];
             const rating = document.createTextNode(rate+"." + randomNum);
             bookRating.appendChild(rating);
         } 

@@ -211,7 +211,7 @@ hr {
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 350px;
-    max-height: 30px;
+    max-height: 350px;
 }
 
 .book-description::-webkit-scrollbar {

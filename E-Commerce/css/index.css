@@ -76,11 +76,11 @@ main {
 }
 
 #ad-slider .fa-circle-right{
-    z-index: 999;
+    z-index: 1002;
     margin: 0 auto;
 }
 #ad-slider .fa-circle-left{
-    z-index: 999;
+    z-index: 1002;
     margin: 0 auto;
     margin-right: 700px;
   
@@ -248,14 +248,14 @@ main {
     width: 250px;
     height: 400px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     transition: 0.5s ease;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .author-item:hover{
@@ -285,7 +285,11 @@ main {
     margin: 0 20px;
 }
 
-.author-item p {
+#authors a{
+    text-decoration: none;
+  }
+
+ .author-item p {
     width: 90%;
     color: black;
     text-align: center;

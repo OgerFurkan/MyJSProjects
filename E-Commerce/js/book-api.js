@@ -4,7 +4,6 @@ class BookAPI {
         this.urlID = "https://www.googleapis.com/books/v1/volumes/";
     }
 
-
     async fetchBooks(searchTerm) {
         const response = await fetch(this.BASEurl + searchTerm);
         const data = await response.json();
@@ -17,5 +16,13 @@ class BookAPI {
         const data = await response.json();
         return await data;
     }
+
+    async fetchBookBySubject(subject) {
+        const response = await fetch(this.BASEurl +"subject:"+ subject+"&maxResults=40");
+        const data = await response.json();
+        const books = data.items;
+        return await books;
+    }
+
 }
 
