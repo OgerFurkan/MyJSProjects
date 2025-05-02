@@ -191,3 +191,133 @@ hr{
 }
 
 
+@media (max-width: 1600px) {
+  .author-container {
+    margin-top: 350px;
+  }
+
+  .author-image img {
+    width: 150px;
+  }
+
+  .description-container {
+
+    width: 100%;
+  }
+
+  .description-title {
+    font-size: 1.2em;
+  }
+
+  .author-description {
+    font-size: 1em;
+  }
+
+  .bottom h2 {
+    font-size: 1.5em;
+  }
+
+  .author-book {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .author-book a img {
+    
+  }
+
+  .author-book h3 {
+    font-size: 1em;
+  }
+
+  .author-book h1 {
+    font-size: 0.9em;
+  }
+
+  .author-book button {
+    font-size: 0.9em;
+    width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .author-container {
+      margin-top: 400px;
+    }
+    main {
+      width: 95%;
+      margin: 0 auto;
+    }
+  
+    .author-image img {
+      width: 200px;
+    }
+  
+    .author-name {
+      font-size: 1.8em;
+    }
+  
+    .author-birth-date {
+      font-size: 1.2em;
+    }
+  
+    .description-container {
+      font-size: 1em;
+      min-width: unset;
+      width: 100%;
+    }
+  
+    .description-title {
+      font-size: 1.5em;
+    }
+  
+    .author-description {
+      height: auto;
+      font-size: 0.95em;
+    }
+  
+    .bottom h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+  
+    .author-book {
+      width: 90%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .author-book a img {
+      width: 150px;
+      height: auto;
+    }
+  
+    .author-book h3 {
+      font-size: 1.2em;
+    }
+  
+    .author-book h1 {
+      font-size: 1em;
+    }
+  
+    .author-book button {
+      font-size: 1em;
+      width: 90%;
+    }
+  
+    .vl {
+      display: none;
+    }
+  
+    #search-input {
+      width: 90%;
+    }
+  }
+
+
+
+  

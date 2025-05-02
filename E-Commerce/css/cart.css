@@ -1,0 +1,273 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+hr{
+    border: 1px solid #53bd97;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20%;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 20px;
+}
+
+header h1{
+    color: #53bd97;
+   
+}
+
+header h1 i{
+    color: #db7413;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.products-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 60%;
+    margin: 0 auto 
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid #53bd97;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 100px;
+    margin-bottom: 20px;
+    width: auto;
+  }
+
+.book-info{
+  display: flex;
+  vertical-align: top;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-right: auto;
+}
+
+.book-info a img{
+    width: 90px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.book-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.book-details *{
+    margin-top: 5px;
+}
+
+.book-details h6{
+    font-weight: 100;
+}
+
+.counter {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    background: #fff;
+  }
+
+  .number-of-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start ;
+    margin-top: 10px;
+  }
+
+  .number-of-books h4 {
+    margin-bottom: 10px;
+    color: #000000ad;
+  }
+
+  .counter button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #53bd97;
+    width: 20px;
+  }
+
+  .counter span {
+    margin: 0 10px;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .book-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .book-price h4 {
+    margin-bottom: 10px;
+    color: #000000ad;
+  }
+
+  .book-price h2 {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .fa-xmark {
+    color: #db7413;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 15%;
+    min-width: 300px;
+    max-height: 200px;
+    border: 1px solid #53bd97;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+
+  .total-price a:nth-child(1) {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #53bd97;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .total-price a:nth-child(1):hover {
+    background-color: #3a9f7a;
+    scale: 1.05;
+  }
+
+  .total-price .result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .total-price h2 {
+    font-size: 1.5em;
+    color: #000000ad;
+  }
+
+  .total-price .total{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #53bd97;
+
+    text-align: center;
+  }
+
+  .total-price .payment{
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #53bd97;
+    background-color: #fff;
+    border: 1px solid #53bd97;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+ .total-price .payment:hover {
+    background-color: #3a9f7a;
+    color: #fff;
+    border-color: #fff;
+    scale: 1.05;
+  }
+
+  .clear-cart{
+    text-align: center;
+    width: 10%;
+    margin-top: 50px;
+    margin-left: -50%;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #db7413;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .clear-cart:hover {
+      background-color: #3a9f7a;
+       color: #fff;
+      border-color: #fff;
+       scale: 1.05;
+  }
+
+
+
+
+
+

@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const category of categories) {
           if (category.classList.contains("selected")) {
             const categoryId = category.id;
-            const books = await fetchBooksByCategory.fetchBookBySubject(categoryId);  
+            const books = await fetchBooksByCategory.fetchBookBySubject(categoryId);
+            window.scrollTo(0, 0);
             displayBooks(books, category);
           }
         }
@@ -37,13 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
         books.forEach((book) => {
                 const bookDiv = document.createElement("div");
                 bookDiv.classList.add("book");
-                
+                bookDiv.setAttribute("data-id", book.id);
                 const a= document.createElement("a");
                 a.href = `book.html?id=${book.id}`;
     
                 const img  = document.createElement("img");
                 if(book.volumeInfo.imageLinks){
-                    img.src = book.volumeInfo.imageLinks.extraLarge || book.volumeInfo.imageLinks.large || book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail;
+                    let url = book.volumeInfo.imageLinks.extraLarge || book.volumeInfo.imageLinks.large || book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail;
+
+                    img.src = url.replace(/^http:\/\//i, "https://"); 
             } else {
                 img.src = "../src/images/logos/logo.jpg";
             }
@@ -71,12 +74,24 @@ document.addEventListener("DOMContentLoaded", function () {
     
                 const price = document.createElement("span");
                 price.classList.add("price");
-                price.textContent = book.saleInfo.listPrice ? book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode : "Ücretsiz";
-    
+               
                 const toCart = document.createElement("span");
                 toCart.classList.add("to-cart");
                 toCart.textContent = "Sepete Ekle";
-    
+
+                 if (book.saleInfo.listPrice) {
+                        price.textContent = book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode;
+                    } else if (book.saleInfo.saleability === "FREE") {
+                        price.textContent = "Ücretsiz";    
+                    } else {
+                        price.textContent = "Stokta Yok";
+                        button.style.backgroundColor = "red";
+                        button.style.color = "white";
+                        bookDiv.style.cursor = "not-allowed";
+                        button.style.pointerEvents = "none";
+                        button.style.opacity = "0.5";
+                    }   
+        
                 bookDiv.appendChild(a);
                 a.appendChild(img);
                 bookDiv.appendChild(title);
@@ -93,8 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     firstInitialization();
     run(); 
-
-        
-
-
 });

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     const fetchDetails= new BookAPI();
     
-
+    const bookContainer = document.querySelector(".book-container");
     const bookImg = this.querySelector(".book-image");
     const infoValues = document.querySelectorAll(".book-info-value");
     const bookTitle = document.querySelector(".book-title");
@@ -15,14 +15,17 @@ document.addEventListener("DOMContentLoaded", function (){
     const bookPrice = document.querySelector(".book-price");
     const bookDescription = document.querySelector(".book-description");
     const gPlay = document.querySelector(".g-play-link");
+    const addToCart = document.querySelector(".add-to-cart");
 
     async function getDetails() {
         const bookDetails =  await fetchDetails.fetchBookByID(bookId);
-        console.log(bookId);
+        bookContainer.setAttribute("data-id", bookId);
         document.title = bookDetails.volumeInfo.title + " - Kitap Kurdu";
 
         if (bookDetails.volumeInfo.imageLinks) {
-            bookImg.src = bookDetails.volumeInfo.imageLinks.extraLarge || bookDetails.volumeInfo.imageLinks.large || bookDetails.volumeInfo.imageLinks.medium|| bookDetails.volumeInfo.imageLinks.thumbnail || bookDetails.volumeInfo.imageLinks.smallThumbnail;
+            let url =  bookDetails.volumeInfo.imageLinks.extraLarge || bookDetails.volumeInfo.imageLinks.large || bookDetails.volumeInfo.imageLinks.medium || bookDetails.volumeInfo.imageLinks.thumbnail || bookDetails.volumeInfo.imageLinks.smallThumbnail;
+
+             bookImg.src = url.replace(/^http:\/\//i, "https://"); 
         } else {
             bookImg.src = "../src/images/logos/logo.jpg";
         }
@@ -77,20 +80,26 @@ document.addEventListener("DOMContentLoaded", function (){
             const rating = document.createTextNode(rate+"." + randomNum);
             bookRating.appendChild(rating);
         } 
-
-        if (bookDetails.saleInfo && bookDetails.saleInfo.listPrice) {
-            if(bookDetails.saleInfo.listPrice.amount > 0) {
+        console.log(bookDetails);
+        if (bookDetails.saleInfo) {
+            if(bookDetails.saleInfo.listPrice) {
                 bookPrice.textContent = bookDetails.saleInfo.listPrice.amount + " " + bookDetails.saleInfo.listPrice.currencyCode;
             }
-            else {
+            else if (bookDetails.saleInfo.saleability == "FREE") {
                 bookPrice.textContent = "Ücretsiz";
                 bookPrice.style.color = "green";
-            }    
+            }  
+            else {
+                bookPrice.textContent = "Stokta Yok";
+                bookPrice.style.color = "red";
+                addToCart.classList.add("disabled");
+                addToCart.style.cursor = "not-allowed";
+                addToCart.style.backgroundColor = "red";
+                addToCart.textContent = "Stokta Yok";
+                addToCart.style.opacity = "0.5";
+
+            }
         } 
-        else {
-            bookPrice.textContent = "Stokta Yok";
-            bookPrice.style.color = "red";
-        }
         if (bookDetails.volumeInfo.description) {
             bookDescription.innerHTML = bookDetails.volumeInfo.description;
         } else {
@@ -123,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
     if(bookId==1) {
+        bookContainer.setAttribute("data-id", 1);
         bookTitle.textContent = "Gözler";
         bookAuthor.textContent = "Berat Kaçar";
         bookDescription.textContent = " ~Gözler~, içsel çatışmalar ve travmalar etrafında şekillenen, karanlık bir atmosferde geçen bir hikâye sunar. Fantastik ve mitolojik ögelerle harmanlanan metin, zaman zaman sert ve rahatsız edici sahnelerle ilerlerken, karakterlerin psikolojisine odaklanır. Anlatım dili yer yer yoğun ve detaylıdır, bu da okuyucudan dikkatli bir takip gerektirir. Genel olarak, karanlık temaları seven okuyucular için ilgi çekici bir deneyim olabilir."
@@ -143,7 +153,11 @@ document.addEventListener("DOMContentLoaded", function (){
         infoValues[5].textContent = "978-605-1234-5678";
         infoValues[6].textContent = bookCategory.textContent;
         infoValues[7].textContent = bookRating.textContent;
-        gPlay.href = "../pages/index.html";
+        gPlay.style.backgroundColor = "red"
+        gPlay.style.cursor = "not-allowed";
+        gPlay.textContent = "Henüz Satışta Değil";
+        gPlay.href = "#";
+        gPlay.style.opacity = "0.5";
         document.title = bookTitle.textContent + " - Kitap Kurdu";
     }
     else {

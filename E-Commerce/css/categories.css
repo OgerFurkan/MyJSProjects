@@ -2,11 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    box-sizing: border-box;
     transition: all 0.5s;
 }
 
-hr{
+.category-hr{
     width: 90%;
     height: 3px;
     background-color: #ccc;
@@ -179,8 +178,111 @@ main{
     color: black;
 }
 
+.disabled{
+    pointer-events: none;
+    background-color: red;
+    opacity: 0.5;
+}
+
+@media (max-width: 1600px) {
+    .categories {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        margin-top: 180px;
+        gap: 5px;  
+
+    }
+    .categories .category {
+        width: 20%;
+        height: 150px;
+        padding: 10px 40px;
+        font-size: 0.8em;
+    }
+
+     .book-container {
+        gap: 20px;
+     }
+    
+
+    .book-container .book {
+        width: 250px;
+        height: 400px;
+    }
+
+    .book a img {
+        width: 120px;
+        height: 180px;
+    }
+
+    .book h3 {
+        font-size: 1.2em;
+    }
+
+    .book h1 {
+        font-size: 1em;
+    }
+
+    .book .purchase {
+        font-size: 0.8em;
+        height: 35px;
+    }
+    
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .categories {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        margin-top: 180px;
+        gap: 5px;  
+
+    }
+    .categories .category {
+        width: 20%;
+        height: 150px;
+        padding: 10px 40px;
+        font-size: 0.8em;
+    }
+
+     .book-container {
+        gap: 20px;
+     }
+    
+
+    .book-container .book {
+        width: 250px;
+        height: 400px;
+    }
+
+    .book a img {
+        width: 120px;
+        height: 180px;
+    }
+
+    .book h3 {
+        font-size: 1.2em;
+    }
+
+    .book h1 {
+        font-size: 1em;
+    }
+
+    .book .purchase {
+        font-size: 0.8em;
+        height: 35px;
+    }
+}

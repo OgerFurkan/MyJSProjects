@@ -25,13 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchedBooks.forEach(book => {
             const sliderItemBook = document.createElement("div");
             sliderItemBook.classList.add("slider-item-book");
+            sliderItemBook.setAttribute("data-id", book.id);
         
             const a = document.createElement("a");
             a.href = "book.html?id=" + book.id;
             
             const img = document.createElement("img");
             if (book.volumeInfo.imageLinks) {
-                img.src = book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail;
+                let url = book.volumeInfo.imageLinks.extraLarge || book.volumeInfo.imageLinks.large || book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail;
+
+                img.src = url.replace(/^http:\/\//i, "https://"); 
             }
             else {
                 img.src = "../src/images/logos/logo.jpg";
@@ -55,8 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 price.textContent = book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode;
             } else {
                 price.textContent = "Stokta Yok";
-                price.style.color = "red";
+                button.classList.add("disabled");
+                button.style.cursor = "not-allowed";
+                button.style.backgroundColor = "red";
             }
+            
         
             const addToCart = document.createElement("span");
             addToCart.classList.add("to-cart"); 

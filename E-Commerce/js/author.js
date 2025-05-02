@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const authorBooks = document.querySelector(".author-books");
 
 
-
-
     async function getAuthor(authorId) {
         let author = {};
         const response = await fetch("../src/authors-info/author.json");
@@ -32,16 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
         name.textContent = author.name;
         birthdate.textContent = author.birthDate + "-" + author.deathDate;
         description.textContent = author.bio;
+        document.title = author.name + " - Kitap Kurdu";
         author.books.forEach(async (bookId) => {
             const book =  await authorGetBooks.fetchBookByID(bookId);
             const authorBook = document.createElement("div");
             authorBook.classList.add("author-book");
+            authorBook.setAttribute("data-id", book.id);
 
             const a = document.createElement("a");
             a.href = `book.html?id=${book.id}`;
 
             const img = document.createElement("img");
-            img.src = book.volumeInfo.imageLinks.large;
+            let url = book.volumeInfo.imageLinks.extraLarge || book.volumeInfo.imageLinks.large || book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail;
+
+            img.src = url.replace(/^http:\/\//i, "https://"); 
 
             const bookTitle = document.createElement("h3");
             bookTitle.textContent = book.volumeInfo.title;

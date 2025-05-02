@@ -22,6 +22,11 @@ footer{
     height: 100%;
     margin-top: 10px;
 }
+.footer-left .logo-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
 
 .footer-right, .footer-left{
     display: flex;
@@ -54,4 +59,74 @@ footer .vl{
     border-left: 1px solid white;
     height: 20px;
     margin: 0 20px;
+}
+.footer-left .social-media i{
+    font-size: 1.5em;
+    color: white;
+    transition:all  0.5s ;
+}
+.footer-left .social-media i:hover{
+    color: #FD0599;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  footer {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .footer-left, .footer-right {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .footer-left .logo-name {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  footer a {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+
+  .footer-left .social-media i {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 5px;
+  }
+
+  .footer-left .logo-name {
+    font-size: 0.9em;
+  }
+
+  footer a {
+    font-size: 0.9em;
+  }
+
+  .footer-left .social-media i {
+    font-size: 1em;
+  }
 }

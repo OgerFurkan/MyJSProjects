@@ -42,6 +42,10 @@ async function handleDisplay() {
 let searchCounter = 0;
 async function DisplayBooks() { 
     const query= searchInput.value.trim();
+    if (searchResult) {
+        searchResult.innerHTML = "";
+        searchResult.style.display = "none";
+    }
 
     if (!query){
         searchResult.innerHTML = "";
@@ -129,8 +133,18 @@ links.forEach((link) => {
     }
 });
 
+function updateCartCount() {
+    const cartCount = document.querySelector(".number-of-products");
+    const cartItems = JSON.parse(localStorage.getItem("products")) || [];
+    const count = cartItems.length;
+    cartCount.textContent = count > 0 ? count : "0";
+}
+
+document.addEventListener("click", function () {
+    setTimeout(updateCartCount, 100);
+  });
+
+updateCartCount();
+
 run();
 });
-
-
-
