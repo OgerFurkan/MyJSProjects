@@ -235,7 +235,7 @@ main{
         flex-direction: row;
         align-items: center;
         position: relative;
-        margin-top: 150px;
+        margin-top: 180px;
         gap: 5px;  
 
     }
@@ -293,7 +293,7 @@ main{
         flex-direction: row;
         align-items: center;
         position: relative;
-        margin-top: 30px;
+        margin-top: 60px;
         gap: 5px;  
 
     }
