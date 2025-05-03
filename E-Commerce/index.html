@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Giriş Yap - Kitap Yurdu</title>
     <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/to-up.css" />
-    <link rel="stylesheet" href="/css/book-slider.css" />
-
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="apple-touch-icon" sizes="180x180" href="/src/images/logos/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/images/logos/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/src/images/logos/favicon-16x16.png">
     <link rel="manifest" href="/src/images/logos/site.webmanifest">
 
-    
-    <title>Kitap Kurdu</title>
-  </head>
 
+  </head>
   <body>
     <nav>
       <div class="nav-top">
@@ -82,134 +78,94 @@
         <a class="bookLink" href="book.html?id=1">KİTAPLAR</a>
       </div>
     </nav>
+
+   
+
     <main>
-      <section id="ad-slider">
-        <i class="fa-regular fa-circle-left"></i>
-        <div class="slider-item">
-          <a href="book.html?id=1">
-            <img
-            src="/src/images/ads/ad-discount-1200x390-3.png"
-            alt="Slider 1"
-          />
-          </a>
-        </div>
-        <div class="slider-item">
-          <a href="book.html?id=WfIhDAAAQBAJ">
-            <img
-            src="/src/images/ads/ad-discount-1200x390-1.png"
-            alt="Slider 2"
-          />
-          </a>
-        </div>
-        <div class="slider-item">
-          <a href="book.html?id=BIVTEQAAQBAJ">
-            <img
-            src="/src/images/ads/ad-discount-1200x390-2.png"
-            alt="Slider 3"
-          />
-          </a>
-        </div>
-        <div class="slider-item">
-          <a href="book.html?id=b8WWDwAAQBAJ">
-            <img
-            src="/src/images/ads/ad-discount-1200x390-4.png"
-            alt="Slider 1"
-          />
-          </a>
-        </div>
 
-        <i class="fa-regular fa-circle-right"></i>
+      <div class="login-container">
 
-        <div class="dots">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle-dot"></i>
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle"></i>
-        </div>
-      </section>
-
-      <hr/>
-
-      <span class="book-slider-container">
-        <div id="book-slider-title">
-          <input
-            type="radio"
-            id="best-seller"
-            name="option"
-            value="bestSeller"
-            checked
-          />
-          <label for="best-seller">Çok Satanlar</label>
-          <div class="vl"></div>
-  
-          <input type="radio" id="new-books" name="option" value="newBooks" />
-          <label for="new-books">Yeni Kitaplar</label>
-        </div>
-
-
-
-
-
-        <span class="loader"></span>
-        <section id="book-slider">
-          <i class="fa-solid fa-arrow-left"></i>
-          <div class="book-slider-wrapper">
-            <div class="book"><a href="book.html?id=H3-7AAAAIAAJ"><img src="https://books.google.com/books/content?id=H3-7AAAAIAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"></a><h3>The Novel Today</h3><h1>Malcolm Bradbury</h1><p class="publisher">Manchester University Press</p><button class="purchase"><span class="price">Ücretsiz</span><span class="to-cart">Sepete Ekle</span></button></div>
+        <div class="login-form">   
+          <h1>Giriş Yap</h1>
+          <div class="links">
+            <div class="link"><a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="link">
+              <a href="" class="google"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <div class="link"><a href="" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            
           </div>
-          <i class="fa-solid fa-arrow-right"></i>
-        </section>
-      </span>
-      <div class="responsive">
-
-        <h1 class="title">Çok Satanlar</h1>
-
-        <div class="best-sellers">
-
+          <p class="or">veya hesabını kullan</p>
+          <form action="">
+            <div class="input-container">
+              <input type="email" id="email" placeholder="Email" required 
+              />
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Şifre" required />
+            </div>
+            <button type="submit">Giriş Yap</button>
+          </form>
+          <p class="forgot-password">Şifreni mi unuttun?</p>
         </div>
 
-        <h1 class="title">Yeni Kitaplar</h1>
+        <div class="blocker">
+          <div class="sign-in-div">
+            <img src="/src/images/logos/Logo.jpg" class="logo" alt="">
+            <h1>Tekrar Hoş Geldin!</h1>
+            <p class="sign-in-text">Hesabına giriş yap ve kitap dünyasına katıl!</p>
+            <label for="sign-in">Giriş Yap</label>
+            <input type="radio" id="sign-in" name="sign" checked />
+          </div>
 
-        <div class="new-books">
-
+          <div class="sign-up-div">
+            <img src="/src/images/logos/Logo.jpg" class="logo" alt="">
+            <h1>Üye Ol!</h1>
+            <p class="sign-up-text">Kitap dünyasına katılmak için üye ol!</p>
+            <label for="sign-up">Üye Ol</label>
+            <input type="radio" id="sign-up" name="sign"/>
+          </div>
+        </div>
+        <div class="responsive">
+          <hr>
+          <p class="or">veya</p>
+          <hr>
         </div>
 
 
+        <div class="sign-up-form">
+          <h1>Hesap Oluştur</h1>
+          <div class="links">
+            <div class="link"><a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="link">
+              <a href="" class="google"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <div class="link"><a href="" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            
+          </div>
+          <p class="or">veya email adresinle üye ol</p>
+          <form action="">
+            <div class="input-container">
+              <input type="text" id="name" placeholder="İsim" required />
+            </div>
+            <div class="input-container">
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Şifre" required />
+            </div>
+            <button type="submit">Üye Ol</button>
+          </form>
+
+
+        </div>
       </div>
 
-      <hr>
-
-      
-      <section id="authors">
-        <h2>Başlıca Yazarlar</h2>
-        <div class="author-bottom">
-          <a href="author.html?id=0">
-            <div class="author-item">
-              <img src="/src/images/authors/author-1.jpg" alt="Author 1" />
-              <p>Stefan Zweig</p>
-            </div>
-          </a>
-      
-          <div class="vl"></div>
-      
-          <a href="author.html?id=1">
-            <div class="author-item">
-              <img src="/src/images/authors/author-2.jpg" alt="Author 2" />
-              <p>Fyodor Dostoevsky</p>
-            </div>
-          </a>
-      
-          <div class="vl"></div>
-      
-          <a href="author.html?id=2">
-            <div class="author-item">
-              <img src="/src/images/authors/author-4.jpg" alt="Author 4" />
-              <p>George Orwell</p>
-            </div>
-          </a>
-        </div>
-      </section>
-      
     </main>
+
+
 
     <footer>
       <div class="footer-top">
@@ -239,22 +195,10 @@
       <div class="footer-bottom">
         <p>© 2025 Kitap Kurdu. Tüm hakları saklıdır.</p>
   </footer>
-    <div class="to-up">
-      <a href="#">
-        <i class="fa-solid fa-up-long"></i>
-      </a>
-      <p>Başa Dön</p>
-    </div>
     
-
-
-  <script src="/js/book-api.js"></script>
-  <script src="/js/nav-search.js"></script>
-  <script src="/js/ad-slider.js"></script>
-  <script src="/js/book-slider.js"></script>
-  <script src="/js/cart.js" ></script>
-  <script src="/js/index.js"></script>
+    <script src="/js/book-api.js" ></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/nav-search.js"></script>
+    <script src="/js/cart.js"></script>
   </body>
-
- 
 </html>

@@ -395,13 +395,13 @@ main{
   @media (max-width: 480px) {
     header {
       margin-left: 5%;
-      margin-top: 50px;
+      margin-top: 200px;
       font-size: 14px;
     }
     .products-container {
       width: 100%;
       flex-direction: column;
-      margin: 120px auto;
+      margin: 0px auto;
     }
     .products{
       width: 100%;

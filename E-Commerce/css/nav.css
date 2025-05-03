@@ -449,6 +449,7 @@ nav{
         width: 100%;
         height: auto;
         padding: 0 5%;
+        z-index: 9999;
     }
     .nav-left {
         width: 100%;
@@ -466,7 +467,8 @@ nav{
     .nav-right {
         width: 100%;
         justify-content: center;
-        margin: 0;
+        margin: 10px 0;
+
     }
 
     .nav-middle {
@@ -521,6 +523,7 @@ nav{
         flex-wrap: wrap;
         text-align: center;
         padding: 5px 0;
+        z-index: 9999;
     }
 
     .nav-bottom a {
@@ -543,11 +546,11 @@ nav{
             position: static;
             top: 0;
         }
-
         .nav-top {
             margin-top: 170px;
             flex-direction: column;
             padding: 5px 5%;
+            z-index: 9999;
         }
         .nav-left a {
             font-size: 0.5em;
@@ -570,6 +573,7 @@ nav{
         .nav-middle {
            margin-top: -15px;
             height: auto;
+           
         }
 
         .nav-middle input {
@@ -591,6 +595,8 @@ nav{
         .nav-right {
             width: 50%;
             height: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
             justify-content: center;
         }
 
@@ -602,6 +608,8 @@ nav{
         .nav-bottom {
             flex-direction: column;
             font-size: 0.9em;
+            z-index: 9999;
+           
         }
 
         .nav-bottom a {

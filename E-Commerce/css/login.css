@@ -226,13 +226,15 @@ form button:hover {
 }
 @media (max-width: 1600px) {
     .login-container {
-       margin-top: 300px;
+       margin-top: 320px;
+       margin-bottom: 20px;
     }
 }
 
 @media (max-width: 1300px) {
     .login-container {
        font-size: 0.8em;
+      
     }
 }
 
@@ -240,6 +242,8 @@ form button:hover {
     .login-container {
         text-align: center;
         font-size: 0.8em;
+        margin-top: 280px;
+        margin-bottom: 20px;
     }
     .login-container form button{
         padding-right: 60px;
@@ -251,7 +255,6 @@ form button:hover {
     .blocker label{
         padding-right: 60px;
     }
-   
    
 }
 
