@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!productId) return;
     
         try {
-            const bookData = await fetchBookByID(productId);
+            const bookData = await bookApi.fetchBookByID(productId);
     
             if (e.target.closest(".add-to-cart") || (e.target.closest(".purchase") && bookData.volumeInfo?.saleability !== "FOR_NOT_SALE")) {
                 let products = JSON.parse(localStorage.getItem("products")) || [];
