@@ -395,7 +395,7 @@ main{
   @media (max-width: 480px) {
     header {
       margin-left: 5%;
-      margin-top: 200px;
+      margin-top: 230px;
       font-size: 14px;
     }
     .products-container {
