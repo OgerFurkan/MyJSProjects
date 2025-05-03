@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bestSellerRadio = document.getElementById("best-seller");
     const newBooksRadio = document.getElementById("new-books");
     const loadingSpinner = document.querySelector('.loader');
+
     const width = 370;
     const bookCount = 4;
 

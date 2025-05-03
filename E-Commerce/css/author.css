@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
 main{
@@ -189,11 +190,24 @@ hr{
     display: block;
     color: black;
 }
+.added-to-cart {
+  display: none;
+  color: #53bd97;
+  font-size: 1.2em;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #53bd97;
+}
 
 
 @media (max-width: 1600px) {
   .author-container {
-    margin-top: 350px;
+    margin-top:200px;
   }
 
   .author-image img {
@@ -222,10 +236,6 @@ hr{
     padding: 10px;
   }
 
-  .author-book a img {
-    
-  }
-
   .author-book h3 {
     font-size: 1em;
   }
@@ -238,6 +248,12 @@ hr{
     font-size: 0.9em;
     width: 100%;
   }
+  .vl {
+    display: none;
+  }
+  .to-up{
+    width: 1px;
+  }
 }
 
 
@@ -246,7 +262,7 @@ hr{
 @media (max-width: 768px) {
 
     .author-container {
-      margin-top: 400px;
+      margin-top: 150px;
     }
     main {
       width: 95%;
@@ -284,6 +300,11 @@ hr{
       font-size: 2em;
       text-align: center;
     }
+
+    .author-books{
+      margin-bottom: -100px;
+     
+    }
   
     .author-book {
       width: 90%;
@@ -315,6 +336,10 @@ hr{
   
     #search-input {
       width: 90%;
+    }
+
+    .to-up{
+      width: 10px;
     }
   }
 

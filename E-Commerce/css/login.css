@@ -17,6 +17,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .login-form {
@@ -204,9 +205,153 @@ form button:hover {
     color: #53bd97;
     transform: scale(1.05);
 }
+.responsive {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.responsive hr {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+.responsive .or {
+    font-size: 1em;
+    font-weight: 900;
+    color: #53bd97;
+    margin: 10px 0;
+}
+@media (max-width: 1600px) {
+    .login-container {
+       margin-top: 300px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .login-container {
+       font-size: 0.8em;
+    }
+}
+
+@media (max-width: 1050px) {
+    .login-container {
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .login-container form button{
+        padding-right: 60px;
+    }
+    .sign-up-form form button{
+        padding-right: 60px;
+
+    }
+    .blocker label{
+        padding-right: 60px;
+    }
+   
+   
+}
 
 
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin-top: 250px;
+        margin-bottom: 20px;
+    }
 
+    .login-form, .sign-up-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .blocker {
+        display: none;
+    }
+
+    .blocker div .logo {
+        width: 100px;
+    }
+
+    .blocker label {
+        width: 50%;
+        font-size: 1.2em;
+    }
+
+    .input-container input {
+        width: 80%;
+    }
+
+    form button {
+        width: 50%;
+    }
+
+    .links .link {
+        font-size: 1.2em;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+    .responsive {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        margin-top: 250px;
+    }
+    .login-form{
+        margin-bottom: 50px;
+    }
+    .sign-up-form {
+        margin-top: 50px;
+    }
+
+    .blocker {
+        display: none;
+    }
+
+    .blocker div h1 {
+        font-size: 2em;
+    }
+
+    .blocker p {
+        font-size: 1.2em;
+    }
+
+    .blocker label {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .input-container input {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    form button {
+        width: 70%;
+        font-size: 1.2em;
+    }
+
+    .links .link {
+        font-size: 1em;
+        width: 30px;
+        height: 30px;
+    }
+
+    .responsive {
+        display: flex;
+    }
+    
+}
 
 
 

@@ -37,8 +37,7 @@ border: 1px solid black;
     transition: 0.5s ease;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .to-up {
         bottom: 100px;
         right: 50px;
@@ -51,6 +50,24 @@ border: 1px solid black;
 
     .to-up p {
         font-size: 0.9em;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .to-up {
+        bottom: 50px;
+        right: 20px;
+    }
+
+    .to-up a {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+
+    .to-up p {
+        font-size: 0.8em;
     }
 }
 

@@ -231,6 +231,8 @@ hr {
     width: 50%;
     margin: 0 auto;
 }
+.responsive{
+}
 .loader {
     transform: rotateZ(45deg);
     perspective: 1000px;
@@ -309,5 +311,249 @@ hr {
       box-shadow: .2em -.2em 0 0 currentcolor;
     }
   }
+@media (max-width: 1600px) {
+  .book-container {
+    width: 70%;
+    flex-direction: column;
+    margin-top: 350px;
+  }
+  .book-right {
+    margin-top: 20px;
+   
+  }
 
+  .book-left {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .book-left img {
+    width: 300px;
+  }
+
+  .book-info {
+    padding: 15px;
+  }
+
+  .book-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-title {
+    font-size: 3em;
+  }
+
+  .book-author {
+    font-size: 2.5em;
+  }
+
+  .book-category {
+    font-size: 1.5em;
+  }
+
+  .book-publisher,
+  .book-rating {
+    font-size: 1em;
+  }
+
+  .book-price {
+    font-size: 2em;
+  }
+
+}
  
+@media (max-width: 1200px) {
+  .book-container {
+    width: 60%;
+    flex-direction: column;
+    margin-top: 350px;
+  }
+  .book-right {
+    margin-top: 20px;
+   
+  }
+
+  .book-left {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .book-left img {
+    width: 250px;
+  }
+
+  .book-info {
+    padding: 15px;
+  }
+
+  .book-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-title {
+    font-size: 2.5em;
+  }
+
+  .book-author {
+    font-size: 2em;
+  }
+
+  .book-category {
+    font-size: 1.2em;
+  }
+
+  .book-publisher,
+  .book-rating {
+    font-size: 0.9em;
+  }
+
+  .book-price {
+    font-size: 1.5em;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .add-to-cart,
+  .g-play-link {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .description-container {
+    min-width: 300px;
+  }
+
+  .description-title {
+    font-size: 1.2em;
+  }
+
+  .book-description {
+    font-size: 0.9em;
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  .responsive {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .book-container {
+    width: 90%;
+    margin-top: 250px;
+  }
+  .book-right {
+    margin-top: 20px;
+   
+  }
+
+  .book-left img {
+    width: 200px;
+  }
+
+  .book-title {
+    font-size: 2em;
+  }
+
+  .book-author {
+    font-size: 1.5em;
+  }
+
+  .book-category {
+    font-size: 1em;
+  }
+
+  .book-publisher,
+  .book-rating {
+    font-size: 0.8em;
+  }
+
+  .book-price {
+    font-size: 1.2em;
+  }
+
+  .description-container {
+    min-width: 250px;
+  }
+
+  .description-title {
+    font-size: 1em;
+  }
+
+  .book-description {
+    font-size: 0.8em;
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .responsive {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-container {
+    width: 100%;
+    margin-top: 250px;
+    flex-direction: column;
+  }
+  .book-right {
+    margin-top: 20px;
+   
+  }
+  .book-left img {
+    width: 150px;
+  }
+
+  .book-title {
+    font-size: 1.5em;
+  }
+
+  .book-author {
+    font-size: 1.2em;
+  }
+
+  .book-category {
+    font-size: 0.9em;
+  }
+
+  .book-publisher,
+  .book-rating {
+    font-size: 0.7em;
+  }
+
+  .book-price {
+    font-size: 1em;
+  }
+
+  .add-to-cart,
+  .g-play-link {
+    width: 100%;
+  }
+
+  .description-container {
+    min-width: 200px;
+  }
+
+  .description-title {
+    font-size: 0.9em;
+  }
+
+  .book-description {
+    font-size: 0.7em;
+    min-height: 150px;
+    max-height: 150px;
+  }
+
+  .responsive {
+    display: none;
+  }
+}

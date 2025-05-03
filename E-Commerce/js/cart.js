@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const icon = document.querySelector(".nav-right a:nth-child(3)");
 
@@ -5,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.style.color = "black";
     }
 
-   
+    
 
     const bookApi = new BookAPI();
     const totalPrice = document.querySelector(".total-price");
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 products.push(productId);
                 localStorage.setItem("products", JSON.stringify(products));
             }
+            checkBookInCart();
         }
     });
 
@@ -95,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let products = JSON.parse(localStorage.getItem("products")) || [];
         let container = document.querySelector(".products");
-        let productContainer = document.querySelector(".product-container");
+
         container.innerHTML = ""; 
         products.forEach(productId => {
             if(productId == 1){
@@ -315,6 +317,37 @@ document.addEventListener("DOMContentLoaded", function () {
    if(window.location.href.includes("cart.html")){
         displayCartItems();
     }
-  });
-  
+
+  function checkBookInCart() {
+        let products = JSON.parse(localStorage.getItem("products")) || [];
+        let purchaseButton = null;
+       setTimeout(() => {
+        purchaseButton = document.querySelectorAll(".add-to-cart, .purchase");
+       }, 600);
+
+       
+       setTimeout(() => {
+        purchaseButton.forEach(button => {
+            if (products.includes(button.parentElement.getAttribute("data-id")))  {
+                button.style.backgroundColor = "#11573b";
+                button.style.color = "white";
+                button.children[1].style.color = "white";
+                let temp = button.children[0].textContent;
+                button.children[0].innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+                button.children[1].textContent = temp;
+            }
+            else if (products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))){
+                button.innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+                button.style.backgroundColor = "#11573b";
+                button.style.color = "white";
+            }     
+        });
+       }, 650);
+    }
+   window.addEventListener("load", function () {
+        setTimeout(() => {
+            checkBookInCart();
+        }, 650);
+    });
+});
 

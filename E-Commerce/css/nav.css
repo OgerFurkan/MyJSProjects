@@ -328,6 +328,113 @@ nav{
 
 
 @media (max-width: 1600px) {
+    nav {
+        position: static;
+        top: 0;
+    }
+    .nav-top {
+        margin-top: 250px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.9); 
+        backdrop-filter: blur(100px); 
+    }
+
+    .nav-top {
+        width: 100%;
+        height: auto;
+        padding: 0 5%;
+    }
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav-left a {
+        font-size: 1em;
+    }
+    .nav-left .logo-name {
+        font-size: 1.5em;
+        margin-left: 0;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-middle {
+        width: 100%;
+        height: auto;
+        padding: 0 5%;
+        margin: 10px 0;
+    }
+    .nav-middle label i {
+        font-size: 1em;
+    }
+    .nav-middle input {
+        width: 100%;
+        height: 100%;
+        font-size: 1.2em;
+        padding: 5px;
+    }
+    .nav-middle input::placeholder {
+        font-size: 0.9em;
+    }
+    .nav-middle .search-result {
+        width: 90%;
+        height: auto;
+        max-height: 300px;
+        padding: 0 5%;
+        margin-top: 40px;
+        border-radius: 5px;
+    }
+
+    .nav-bottom {
+        margin-top: -20px;
+        font-size: 1.5em;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .search-item a img {
+        width: 60px;
+        transition: width 0.S3s ease;
+    }
+
+    .search-item a:hover img {
+        width: 70px;
+    }
+
+    .search-item a .info-container {
+        height: auto;
+    }
+
+    .nav-bottom {
+        font-size: 1em;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .nav-bottom a {
+        margin: 5px;
+        padding: 4px 6px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-bottom a:hover {
+        background-color: #fff;
+        color: #53bd97;
+    }
+}
+
+@media (max-width: 1200px) {
+   
     .nav-top {
         margin-top: 250px;
         gap: 10px;
@@ -433,16 +540,23 @@ nav{
     
 @media (max-width: 768px) {
         nav {
-            flex-direction: column;
-            padding: 10px 0;
+            position: static;
+            top: 0;
         }
 
         .nav-top {
-            margin-top: 240px;
+            margin-top: 170px;
             flex-direction: column;
             padding: 5px 5%;
         }
-
+        .nav-left a {
+            font-size: 0.5em;
+        }
+        .nav-left a img{
+            width: 30px;
+            height: auto;
+            margin-right: 5px;
+        }
         .nav-left, .nav-middle, .nav-right {
             width: 100%;
             justify-content: center;
@@ -454,7 +568,7 @@ nav{
         }
 
         .nav-middle {
-            padding: 5px;
+           margin-top: -15px;
             height: auto;
         }
 
@@ -464,27 +578,36 @@ nav{
         }
 
         .nav-middle .search-result {
-            max-height: 200px;
+            max-height: 340px;
             width: 90%;
-            margin-top: 90px;
+            margin-top: 23px;
             overflow-y: auto;
+        }
+        .search-item  {
+           height: auto;
+            font-size: 0.8em;
+        }
+
+        .nav-right {
+            width: 50%;
+            height: 5px;
+            justify-content: center;
         }
 
         .nav-right a {
-            font-size: 1em;
+            margin-top: -10px;
+            font-size: 0.8em;
         }
 
         .nav-bottom {
             flex-direction: column;
             font-size: 0.9em;
-            padding: 5px 0;
         }
 
         .nav-bottom a {
-            margin: 5px 0;
+            margin: 10px 0;
             padding: 4px 5px;
-        }
-
+        } 
         .fa-instagram {
             font-size: 2em;
         }

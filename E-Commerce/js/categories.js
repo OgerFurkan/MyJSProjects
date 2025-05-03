@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const categories = document.querySelectorAll(".category");
     const booksContainer = document.querySelector(".book-container");
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const books = await fetchBooksByCategory.fetchBookBySubject(categoryId);
             window.scrollTo(0, 0);
             displayBooks(books, category);
+           
           }
         }
     }
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const books = await fetchBooksByCategory.fetchBookBySubject(categoryId);  
                 window.scrollTo(0, 0);
                 displayBooks(books,category);
+                 checkbookInCart();
             });
         });
     };
