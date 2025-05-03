@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function (){
         bookTitle.textContent = "Gözler";
         bookAuthor.textContent = "Berat Kaçar";
         bookDescription.textContent = " ~Gözler~, içsel çatışmalar ve travmalar etrafında şekillenen, karanlık bir atmosferde geçen bir hikâye sunar. Fantastik ve mitolojik ögelerle harmanlanan metin, zaman zaman sert ve rahatsız edici sahnelerle ilerlerken, karakterlerin psikolojisine odaklanır. Anlatım dili yer yer yoğun ve detaylıdır, bu da okuyucudan dikkatli bir takip gerektirir. Genel olarak, karanlık temaları seven okuyucular için ilgi çekici bir deneyim olabilir."
-        bookImg.src = "../src/images/books/gozler.png";
+        bookImg.src = "/src/images/books/gozler.png";
         bookCategory.textContent = "Fantastik, Kurgu";
         bookPublisher.textContent = "Oger Yayınevi";
         const i =  document.createElement("i");

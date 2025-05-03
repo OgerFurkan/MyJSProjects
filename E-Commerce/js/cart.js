@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 a.href = `book.html?id=${productId}`;
 
                 const img = document.createElement("img");
-                img.src = "../src/images/books/Gozler.png";
+                img.src = "/src/images/books/Gozler.png";
 
                 const bookDetails = document.createElement("div");
                 bookDetails.classList.add("book-details");
