@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function getAuthor(authorId) {
         let author = {};
-        const response = await fetch("./src/authors-info/author.json");
+        const response = await fetch("../src/authors-info/author.json");
         const data = await response.json();
         const authors = data.authors;
         authors.forEach((authorData) => {
