@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 img.src = url.replace(/^http:\/\//i, "https://"); 
             }
             else {
-                img.src = "../src/images/logos/logo.jpg";
+                img.src = "./src/images/logos/logo.jpg";
             }
             
             const bookTitle = document.createElement("h3");
