@@ -647,9 +647,10 @@ main {
 }
 @media (max-width: 768px) {
   #ad-slider {
-    margin-top: 230px;
+    margin-top: 260px;
     
   }
+  
   #ad-slider .slider-item a img{
     width: 100%  
   }
@@ -665,7 +666,7 @@ main {
   }
    #ad-slider .dots {
     font-size: 0.5em;
-    top: 420px;
+    top: 450px;
   }
   .responsive {
     display:flex;

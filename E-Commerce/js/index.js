@@ -36,7 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             const bookTitle = document.createElement("h3");
-            bookTitle.textContent = book.volumeInfo.title;
+
+            if(book.volumeInfo.title.length > 15){
+                bookTitle.textContent = book.volumeInfo.title.substring(0, 12) + "...";
+            }
+            else{
+                bookTitle.textContent = book.volumeInfo.title;
+            }
         
             const bookAuthor = document.createElement("h1");
             bookAuthor.textContent = book.volumeInfo.authors[0];

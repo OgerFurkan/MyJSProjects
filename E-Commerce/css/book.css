@@ -232,6 +232,13 @@ hr {
     margin: 0 auto;
 }
 .responsive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 .loader {
     transform: rotateZ(45deg);
