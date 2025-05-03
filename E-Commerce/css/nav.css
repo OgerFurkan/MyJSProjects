@@ -449,7 +449,7 @@ nav{
         width: 100%;
         height: auto;
         padding: 0 5%;
-        z-index: 9999;
+        z-index: 9998;
     }
     .nav-left {
         width: 100%;
@@ -497,6 +497,7 @@ nav{
         padding: 0 5%;
         margin-top: 40px;
         border-radius: 5px;
+        z-index: 9999;
     }
 
     .nav-bottom {
@@ -524,7 +525,7 @@ nav{
         flex-wrap: wrap;
         text-align: center;
         padding: 5px 0;
-        z-index: 9999;
+        z-index: 9998;
     }
 
     .nav-bottom a {
@@ -551,14 +552,14 @@ nav{
             margin-top: 170px;
             flex-direction: column;
             padding: 5px 5%;
-            z-index: 9999;
+            z-index: 9998;
         }
         .nav-left {
-            z-index: 9999;
+            z-index: 9998;
         }
         .nav-left a {
             font-size: 0.5em;
-            z-index: 9999;
+            z-index: 9998;
         }
         .nav-left a img{
             width: 30px;
@@ -591,12 +592,12 @@ nav{
             width: 90%;
             margin-top: 23px;
             overflow-y: auto;
-            z-index: 10000;
+            z-index: 9999;
         }
         .search-item  {
            height: auto;
             font-size: 0.8em;
-            z-index: 10000;
+            z-index: 9999;
         }
 
         .nav-right {
@@ -615,7 +616,7 @@ nav{
         .nav-bottom {
             flex-direction: column;
             font-size: 0.9em;
-            z-index: 9999;
+            z-index: 9998;
            
         }
 
