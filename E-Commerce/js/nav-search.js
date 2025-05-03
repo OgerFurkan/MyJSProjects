@@ -69,7 +69,7 @@ async function DisplayBooks() {
             if (book.volumeInfo.imageLinks) {
                 img.src = book.volumeInfo.imageLinks.thumbnail;
             } else {
-                img.src = "../src/images/logos/logo.jpg";
+                img.src = "../src/images/logos/Logo.jpg";
             }
 
             const infoContainer = document.createElement("div");

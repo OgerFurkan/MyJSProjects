@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
              bookImg.src = url.replace(/^http:\/\//i, "https://"); 
         } else {
-            bookImg.src = "./src/images/logos/logo.jpg";
+            bookImg.src = "./src/images/logos/Logo.jpg";
         }
         bookTitle.textContent = bookDetails.volumeInfo.title;
         if (bookDetails.volumeInfo.title.length > 12 && bookDetails.volumeInfo.title.length < 20) {

@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     img.src = url.replace(/^http:\/\//i, "https://"); 
                 }
                 else {
-                    img.src = "../src/images/logos/logo.jpg";
+                    img.src = "../src/images/logos/Logo.jpg";
                 }
 
                 const bookDetails = document.createElement("div");
@@ -356,7 +356,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             button.children[0].innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
                             button.children[1].textContent = temp;
                         } 
-                        
                         else {
                             button.innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
                             button.style.backgroundColor = "#11573b";
