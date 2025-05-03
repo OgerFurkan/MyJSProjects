@@ -591,10 +591,12 @@ nav{
             width: 90%;
             margin-top: 23px;
             overflow-y: auto;
+            z-index: 10000;
         }
         .search-item  {
            height: auto;
             font-size: 0.8em;
+            z-index: 10000;
         }
 
         .nav-right {
