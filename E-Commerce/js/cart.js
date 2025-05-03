@@ -14,24 +14,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainContainer = document.querySelector(".products");
     const clearCartButton = document.querySelectorAll(".clear-cart");
 
-    document.body.addEventListener("click", function (e) {
-        let bookElement = e.target.closest(".book") || e.target.closest(".book-container") || e.target.closest(".slider-item-book") || e.target.closest(".author-book");
-
-        if (!bookElement) return; 
+    document.body.addEventListener("click", async function (e) {
+        let bookElement = e.target.closest(".book") || 
+                          e.target.closest(".book-container") || 
+                          e.target.closest(".slider-item-book") || 
+                          e.target.closest(".author-book");
+    
+        if (!bookElement) return;
+    
         let productId = bookElement.getAttribute("data-id");
-
         if (!productId) return;
-        
-
-        if (e.target.closest(".add-to-cart") || e.target.closest(".purchase")) {
-            let products = JSON.parse(localStorage.getItem("products")) || [];
-            if (!products.includes(productId)) {
-                products.push(productId);
-                localStorage.setItem("products", JSON.stringify(products));
+    
+        try {
+            const bookData = await fetchBookByID(productId);
+    
+            if (bookData.volumeInfo?.saleability === "FOR_NOT_SALE") return;
+    
+            if (e.target.closest(".add-to-cart") || e.target.closest(".purchase")) {
+                let products = JSON.parse(localStorage.getItem("products")) || [];
+                if (!products.includes(productId)) {
+                    products.push(productId);
+                    localStorage.setItem("products", JSON.stringify(products));
+                }
+                checkBookInCart();
             }
-            checkBookInCart();
+        } catch (error) {
+            console.error("Kitap verisi alınamadı:", error);
         }
     });
+    
 
     async function calculateTotalPrice() {  
         let products = JSON.parse(localStorage.getItem("products")) || [];
