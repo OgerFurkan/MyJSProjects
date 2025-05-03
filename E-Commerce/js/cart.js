@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let productId = bookElement.getAttribute("data-id");
         if (!productId) return;
     
-        try {
+      
             const bookData = await bookApi.fetchBookByID(productId);
     
             if (e.target.closest(".add-to-cart") || (e.target.closest(".purchase") && bookData.volumeInfo?.saleability !== "FOR_NOT_SALE")) {
@@ -36,9 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 checkBookInCart();
             }
-        } catch (error) {
-            console.error("Kitap verisi alınamadı:", error);
-        }
     });
     
 
@@ -327,46 +324,31 @@ document.addEventListener("DOMContentLoaded", function () {
         displayCartItems();
     }
 
-    async function checkBookInCart() {
+  function checkBookInCart() {
         let products = JSON.parse(localStorage.getItem("products")) || [];
+        let purchaseButton = null;
+       setTimeout(() => {
+        purchaseButton = document.querySelectorAll(".add-to-cart, .purchase");
+       }, 600);
 
-        setTimeout(async () => {
-            let purchaseButtons = document.querySelectorAll(".add-to-cart, .purchase");
-    
-            for (let button of purchaseButtons) {
-                let parentWithId = button.closest("[data-id]");
-                if (!parentWithId) continue;
-    
-                let productId = parentWithId.getAttribute("data-id");
-                if (!productId) continue;
-    
-                try {
-                    const bookData = await fetchBookByID(productId);
-                    if (bookData.volumeInfo?.saleability === "FOR_NOT_SALE") {
-                        continue; 
-                    }
-    
-                    if (products.includes(productId)) {
-                     
-                        if (button.children.length >= 2) {
-                            button.style.backgroundColor = "#11573b";
-                            button.style.color = "white";
-                            button.children[1].style.color = "white";
-                            let temp = button.children[0].textContent;
-                            button.children[0].innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
-                            button.children[1].textContent = temp;
-                        } 
-                        else {
-                            button.innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
-                            button.style.backgroundColor = "#11573b";
-                            button.style.color = "white";
-                        }
-                    }
-                } catch (error) {
-                    console.error("Kitap verisi alınamadı:", error);
-                }
+       
+       setTimeout(() => {
+        purchaseButton.forEach(button => {
+            if (products.includes(button.parentElement.getAttribute("data-id")))  {
+                button.style.backgroundColor = "#11573b";
+                button.style.color = "white";
+                button.children[1].style.color = "white";
+                let temp = button.children[0].textContent;
+                button.children[0].innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+                button.children[1].textContent = temp;
             }
-        }, 650);
+            else if (products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))){
+                button.innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+                button.style.backgroundColor = "#11573b";
+                button.style.color = "white";
+            }     
+        });
+       }, 650);
     }
    window.addEventListener("load", function () {
         setTimeout(() => {
