@@ -323,6 +323,31 @@ nav{
     scale: 1.2;
 }
 
+#micButton{
+    background-color: #fff;
+    border: none;
+    color: #fff;
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#micButton:hover{
+    
+    color: #fff;
+    scale: 1.2;
+}
+
+#micButton:active{
+    background-color: #ccc;
+    color: #fff;
+    scale: 1.2;
+}
+
+
 
 
 

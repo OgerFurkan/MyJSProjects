@@ -12,7 +12,23 @@ function run() {
         if (e.key === "Enter") {
             DisplayBooks();
         }
+        else if (e.key === "Escape") {
+            searchResult.style.display = "none";
+        }
+        else if (searchInput.value.trim() === "") {
+            searchResult.style.display = "none";
+        }
     });
+
+    searchInput.addEventListener("keyup", (e) => {
+        if (e.key === "Escape") {
+            DisplayBooks();
+        }
+        else if (searchInput.value.trim() === "") {
+            searchResult.style.display = "none";
+        }
+    });
+
 
     searchIcon.addEventListener("click", DisplayBooks);
 
@@ -143,6 +159,50 @@ function updateCartCount() {
 document.body.addEventListener("click", function () {
     setTimeout(updateCartCount, 100);
   });
+
+
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+    alert('Tarayıcınız ses tanımayı desteklemiyor.');
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+  recognition.lang = 'tr-TR';
+  recognition.interimResults = false;
+
+  const micButton = document.getElementById('micButton');
+  const searchinput = document.getElementById('search-input');
+
+  micButton.addEventListener('click', () => {
+    recognition.start();
+  });
+
+  recognition.addEventListener('result', (event) => {
+    let transcript = event.results[0][0].transcript;
+
+    transcript = transcript.trim().replace(/\.$/, '');
+
+    searchinput.value = transcript;
+
+    DisplayBooks();
+
+    });
+
+  recognition.addEventListener('error', (event) => {
+    console.error('Hata:', event.error);
+  });
+
+
+
+
+
+
+
+
+
 
 updateCartCount();
 
