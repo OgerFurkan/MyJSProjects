@@ -14,35 +14,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainContainer = document.querySelector(".products");
     const clearCartButton = document.querySelectorAll(".clear-cart");
 
+
+
+    function updateCartCount() {
+        const cartCount = document.querySelector(".number-of-products");
+        const cartItems = JSON.parse(localStorage.getItem("products")) || [];
+        const count = cartItems.length;
+        cartCount.textContent = count > 0 ? count : "0";
+    }
+
     document.body.addEventListener("click", async function (e) {
         let bookElement = e.target.closest(".book") || 
                           e.target.closest(".book-container") || 
                           e.target.closest(".slider-item-book") || 
                           e.target.closest(".author-book");
+                          
 
         let products = JSON.parse(localStorage.getItem("products")) || [];
     
         if (!bookElement) return;
+
         let productId = bookElement.getAttribute("data-id") || bookElement.parentElement.parentElement.parentElement.getAttribute("data-id");
     
         if (!productId) return;
+
         if (productId == 1) {
             if (!products.includes(productId)) {
                 products.push(productId);
                 localStorage.setItem("products", JSON.stringify(products));
             }
             checkBookInCart();
+            updateCartCount();
             return;
         }
 
-        console.log("ProductID "+productId);
         let bookID= await bookApi.fetchBookByID(productId);
-        console.log("BookID"+bookID);
+
         if (bookID.saleInfo.saleability == "NOT_FOR_SALE" || bookID.saleInfo.saleability == "FOR_NOT_SALE"){
             return;
         }
-    
-    
     
          if (e.target.closest(".add-to-cart") || (e.target. closest(".purchase"))) {
          if (!products.includes(productId)) {
@@ -50,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("products", JSON.stringify(products));
             }
             checkBookInCart();
+            updateCartCount();
         }
     });
     
@@ -84,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 if (book.saleInfo.saleability == "FREE") {
                     total += 0;
+                    totalValue.textContent = total.toFixed(2) + " TRY";
                 } else {
                     const amount = book.saleInfo.listPrice.amount;
                     total += amount * productCount;
@@ -108,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         countSpan.textContent = currentCount;
         calculateTotalPrice();
-
     }
     });
 

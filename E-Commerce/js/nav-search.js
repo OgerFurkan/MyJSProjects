@@ -140,7 +140,7 @@ function updateCartCount() {
     cartCount.textContent = count > 0 ? count : "0";
 }
 
-document.addEventListener("click", function () {
+document.body.addEventListener("click", function () {
     setTimeout(updateCartCount, 100);
   });
 
