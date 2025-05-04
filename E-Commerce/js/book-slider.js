@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.classList.add("disabled");
                 button.style.cursor = "not-allowed";
                 button.style.backgroundColor = "red";
+                button.style.pointerEvents = "none";
+                button.preventDefault();
             }
             
         

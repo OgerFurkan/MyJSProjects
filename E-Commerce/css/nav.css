@@ -346,6 +346,7 @@ nav{
         width: 100%;
         height: auto;
         padding: 0 5%;
+        z-index: 1050;
     }
     .nav-left {
         width: 100%;
@@ -391,6 +392,7 @@ nav{
         padding: 0 5%;
         margin-top: 40px;
         border-radius: 5px;
+        z-index: 3000;
     }
 
     .nav-bottom {
@@ -398,6 +400,8 @@ nav{
         font-size: 1.5em;
         flex-direction: column;
         padding: 10px 0;
+        z-index: 10;
+        
     }
 
     .search-item a img {

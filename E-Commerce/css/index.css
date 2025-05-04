@@ -373,7 +373,7 @@ main {
 }
 @media (max-width: 1437px) {
     #ad-slider {
-      margin-top: 400px;
+      margin-top: 450px;
     }
 
     #ad-slider .slider-item a img {
@@ -647,8 +647,7 @@ main {
 }
 @media (max-width: 768px) {
   #ad-slider {
-    margin-top: 260px;
-    
+    margin-top: 320px;
   }
   
   #ad-slider .slider-item a img{

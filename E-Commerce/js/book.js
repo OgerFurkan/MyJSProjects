@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function (){
             const rating = document.createTextNode(rate+"." + randomNum);
             bookRating.appendChild(rating);
         } 
-        console.log(bookDetails);
         if (bookDetails.saleInfo) {
             if(bookDetails.saleInfo.listPrice) {
                 bookPrice.textContent = bookDetails.saleInfo.listPrice.amount + " " + bookDetails.saleInfo.listPrice.currencyCode;

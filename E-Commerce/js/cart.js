@@ -24,18 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
         let productId = bookElement.getAttribute("data-id");
         if (!productId) return;
+        console.log("ProductID "+productId);
+        let bookID= await bookApi.fetchBookByID(productId);
+        console.log("BookID"+bookID);
+        if (bookID.saleInfo.saleability == "NOT_FOR_SALE" || bookID.saleInfo.saleability == "FOR_NOT_SALE"){
+            return;
+        }
     
-      
-            const bookData = await bookApi.fetchBookByID(productId);
     
-            if (e.target.closest(".add-to-cart") || (e.target.closest(".purchase") && bookData.volumeInfo?.saleability !== "FOR_NOT_SALE")) {
-                let products = JSON.parse(localStorage.getItem("products")) || [];
-                if (!products.includes(productId)) {
-                    products.push(productId);
-                    localStorage.setItem("products", JSON.stringify(products));
-                }
-                checkBookInCart();
+    
+         if (e.target.closest(".add-to-cart") || (e.target.closest(".purchase"))) {
+            let products = JSON.parse(localStorage.getItem("products")) || [];
+        if (!products.includes(productId)) {
+                products.push(productId);
+                localStorage.setItem("products", JSON.stringify(products));
             }
+            checkBookInCart();
+        }
     });
     
 
@@ -55,7 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             if (productId == 1) return;
             bookApi.fetchBookByID(productId).then(book => {
-                if (book.saleInfo.saleability == "NOT_FOR_SALE") return;
+                if (book.saleInfo.saleability == "NOT_FOR_SALE" || book.saleInfo.saleability == "FOR_NOT_SALE"){
+                    products = products.filter(id => id !== productId);
+                    localStorage.setItem("products", JSON.stringify(products));
+                    return;
+                }
+               
                 
                 document.querySelectorAll(".product").forEach(product => {
                     if (product.getAttribute("data-id") === productId) {
@@ -324,31 +334,33 @@ document.addEventListener("DOMContentLoaded", function () {
         displayCartItems();
     }
 
-  function checkBookInCart() {
+   function checkBookInCart() {
         let products = JSON.parse(localStorage.getItem("products")) || [];
         let purchaseButton = null;
        setTimeout(() => {
         purchaseButton = document.querySelectorAll(".add-to-cart, .purchase");
        }, 600);
 
-       
-       setTimeout(() => {
-        purchaseButton.forEach(button => {
-            if (products.includes(button.parentElement.getAttribute("data-id")))  {
+
+       if (purchaseButton == null) return;
+       if (purchaseButton.length == 0) return;
+
+        setTimeout(() => {
+        purchaseButton.forEach(async button => {
+            if (products.includes(button.parentElement.getAttribute("data-id")) || products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))) {
                 button.style.backgroundColor = "#11573b";
                 button.style.color = "white";
                 button.children[1].style.color = "white";
                 let temp = button.children[0].textContent;
-                button.children[0].innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+                button.children[0].innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
                 button.children[1].textContent = temp;
-            }
-            else if (products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))){
-                button.innerHTML= `<i class="fa-solid fa-check"></i> Sepette`;
+            } else if (products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))) {
+                button.innerHTML = `<i class="fa-solid fa-check"></i> Sepette`;
                 button.style.backgroundColor = "#11573b";
                 button.style.color = "white";
-            }     
+            }
         });
-       }, 650);
+    }, 650);
     }
    window.addEventListener("load", function () {
         setTimeout(() => {
