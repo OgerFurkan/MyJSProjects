@@ -19,11 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
                           e.target.closest(".book-container") || 
                           e.target.closest(".slider-item-book") || 
                           e.target.closest(".author-book");
+
+        let products = JSON.parse(localStorage.getItem("products")) || [];
     
         if (!bookElement) return;
+        let productId = bookElement.getAttribute("data-id") || bookElement.parentElement.parentElement.parentElement.getAttribute("data-id");
     
-        let productId = bookElement.getAttribute("data-id");
         if (!productId) return;
+        if (productId == 1) {
+            if (!products.includes(productId)) {
+                products.push(productId);
+                localStorage.setItem("products", JSON.stringify(products));
+            }
+            checkBookInCart();
+            return;
+        }
+
         console.log("ProductID "+productId);
         let bookID= await bookApi.fetchBookByID(productId);
         console.log("BookID"+bookID);
@@ -33,9 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
     
-         if (e.target.closest(".add-to-cart") || (e.target.closest(".purchase"))) {
-            let products = JSON.parse(localStorage.getItem("products")) || [];
-        if (!products.includes(productId)) {
+         if (e.target.closest(".add-to-cart") || (e.target. closest(".purchase"))) {
+         if (!products.includes(productId)) {
                 products.push(productId);
                 localStorage.setItem("products", JSON.stringify(products));
             }
@@ -341,13 +351,9 @@ document.addEventListener("DOMContentLoaded", function () {
         purchaseButton = document.querySelectorAll(".add-to-cart, .purchase");
        }, 600);
 
-
-       if (purchaseButton == null) return;
-       if (purchaseButton.length == 0) return;
-
         setTimeout(() => {
-        purchaseButton.forEach(async button => {
-            if (products.includes(button.parentElement.getAttribute("data-id")) || products.includes(button.parentElement.parentElement.parentElement.getAttribute("data-id"))) {
+        purchaseButton.forEach(button => {
+            if (products.includes(button.parentElement.getAttribute("data-id"))) {
                 button.style.backgroundColor = "#11573b";
                 button.style.color = "white";
                 button.children[1].style.color = "white";
