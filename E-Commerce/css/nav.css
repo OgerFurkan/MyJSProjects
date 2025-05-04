@@ -324,9 +324,8 @@ nav{
 }
 
 #micButton{
-    background-color: #fff;
     border: none;
-    color: #fff;
+    color: #53bd97;
     border-radius: 100px;
     padding: 5px 10px;
     font-size: 1.2em;
@@ -336,13 +335,12 @@ nav{
 }
 
 #micButton:hover{
-    
-    color: #fff;
+    color: #53bd97;
     scale: 1.2;
 }
 
 #micButton:active{
-    background-color: #ccc;
+    background-color: #53bd97;
     color: #fff;
     scale: 1.2;
 }

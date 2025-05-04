@@ -40,62 +40,66 @@
   <body>
     <div class="page-container">
 
-    <nav>
-      <div class="nav-top">
-        <div class="nav-left">
-          <a href="index.html" id="logo">
-            <img
-              src="./src/images/logos/Logo.jpg"
-              alt="Kitap Kurdu"
-              width="60"
-              height="60"
-              style="border-radius: 50%"
+      <nav>
+        <div class="nav-top">
+          <div class="nav-left">
+            <a href="index.html" id="logo">
+              <img
+                src="./src/images/logos/Logo.jpg"
+                alt="Kitap Kurdu"
+                width="60"
+                height="60"
+                style="border-radius: 50%"
+              />
+            </a>
+            <a href="index.html">
+              <p class="logo-name">KİTAP KURDU</p>
+            </a>
+            <div class="vl"></div>
+            <a href="https://www.instagram.com/kit.apkurdu58" target="_blank" class="social-media">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+  
+          <div class="nav-middle">
+            <label for="search-input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Aradığınız kitap bilgisini giriniz..."
+              autocomplete="off"
             />
-          </a>
-          <a href="index.html">
-            <p class="logo-name">KİTAP KURDU</p>
-          </a>
+            <button id="micButton">
+              <i class="fa-solid fa-microphone"></i>
+            </button>
+  
+            <div class="search-result"></div>
+          </div>
+          <div class="nav-right">
+            <a href="login.html" id="login">
+              <i class="fa-regular fa-user"></i>
+              Giriş Yap
+            </a>
+  
+            <div class="vl"></div>
+  
+            <a href="cart.html" id="cart"
+              ><i class="fa-solid fa-cart-shopping"></i>
+              <span class="number-of-products">1</span>Sepet
+            </a>
+          </div>
+        </div>
+        <div class="nav-bottom">
+          <a href="index.html">ANASAYFA</a>
           <div class="vl"></div>
-          <a href="https://www.instagram.com/kit.apkurdu58" target="_blank" class="social-media">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
-
-        <div class="nav-middle">
-          <label for="search-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </label>
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Aradığınız kitap bilgisini giriniz..."
-            autocomplete="off"
-          />
-
-          <div class="search-result"></div>
-        </div>
-        <div class="nav-right">
-          <a href="login.html" id="login">
-            <i class="fa-regular fa-user"></i>
-            Giriş Yap
-          </a>
-
+          <a href="categories.html">KATEGORİLER</a>
           <div class="vl"></div>
-
-          <a href="cart.html" id="cart"
-            ><i class="fa-solid fa-cart-shopping"></i>
-            <span class="number-of-products">1</span>Sepet
-          </a>
+          <a class="bookLink" href="book.html?id=1">KİTAPLAR</a>
         </div>
-      </div>
-      <div class="nav-bottom">
-        <a href="index.html">ANASAYFA</a>
-        <div class="vl"></div>
-        <a href="categories.html">KATEGORİLER</a>
-        <div class="vl"></div>
-        <a class="bookLink" href="book.html?id=1">KİTAPLAR</a>
-      </div>
-    </nav>
+      </nav>
+
     <header>
       <h1><i class="fa-solid fa-cart-shopping"></i> Sepetim</h1>
     </header>

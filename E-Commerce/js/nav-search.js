@@ -195,15 +195,6 @@ document.body.addEventListener("click", function () {
     console.error('Hata:', event.error);
   });
 
-
-
-
-
-
-
-
-
-
 updateCartCount();
 
 run();
