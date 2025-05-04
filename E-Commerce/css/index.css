@@ -665,11 +665,11 @@ main {
   }
    #ad-slider .dots {
     font-size: 0.5em;
-    top: 450px;
+    top: 510px;
   }
   .responsive {
     display:flex;
-    margin-top: -170px;
+    margin-top: -120px;
   }
   .responsive .title{
     font-size: 0.8em;
