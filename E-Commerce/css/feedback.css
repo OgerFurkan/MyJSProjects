@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#feedback-form{
+    padding:60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#feedback-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+   font-size: 4em;
+   color: #53bd97;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form textarea::placeholder{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+form button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #db7413;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.links .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+    margin: 0 10px;
+    padding: 10px 0px;
+    border: 1px solid #ccc;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transition:0.3s;
+}
+.links .link:hover{
+    background-color: #53bd97;
+    color: white;
+    border-color: black;
+    transform: scale(1.1);
+}
+.links a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+}
+.ad-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.ad-video video{
+    width: 50%;
+   
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.ad-title{
+   margin-top: 100px
+}
+
+hr{
+    width: 60%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
