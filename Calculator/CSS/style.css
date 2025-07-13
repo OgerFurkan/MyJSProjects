@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+body{
+    background-color: #FBEEDE;
+    overflow-x: hidden;
+}
+
+.title{
+    margin: 50px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.calculator-wrapper{
+    width: 70%;
+    height: 70vh;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 2%;
+    background-color: #505050;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 6fr;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px
+}
+.result{
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.button-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+    gap: 2px;
+}
+
+.top-buttons{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+
+.top-buttons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#616161;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.side-buttons{
+    grid-column: 2;
+    grid-row: 1/span 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,1fr);
+    gap: 2px;
+}
+.side-buttons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:#f1a13b;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+.side-buttons > div:last-child{
+    border-bottom-right-radius: 10%;
+}
+
+.number-buttons{
+    grid-row: 2/span 4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+.number-buttons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem; 
+    background-color:#7b7b7b; 
+    transition: background-color 0.3s ease;
+}
+.number-buttons > div:nth-last-child(2){
+    grid-column: 1/span 2;
+    border-bottom-left-radius: 10%;
+}
+
+.number-buttons div:hover, .top-buttons div:hover{
+    background-color:#404040;
+    cursor: pointer;
+}
+.side-buttons div:hover{
+    cursor: pointer;
+    background-color: #e0830a;
+}
+
+.number-buttons div:active, .top-buttons div:active{
+    background-color: #555555;
+}
+.side-buttons div:active{
+  background-color: #eba64c;
+}
+
+
+@media (max-width:430px) {
+    .title{
+        font-size: 2rem;
+    }
+    .result{
+        font-size: 5rem;
+    }
+    .number-buttons div{
+        font-size: 3.5rem;
+    }
+    .side-buttons div{
+        font-size: 2rem;
+    }
+    .top-buttons div{
+        font-size: 2rem;
+    }
+}
+
