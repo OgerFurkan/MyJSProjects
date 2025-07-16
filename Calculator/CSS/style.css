@@ -125,13 +125,48 @@ body{
   background-color: #eba64c;
 }
 
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    color: white;
+    font-size: 1.5rem;
+}
+footer>p:first-child{
+    margin: 10px 0;
+}
+footer>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    margin: 10px 10px;
+}
+footer a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+footer a{
+    color: #f1a13b;
+    text-decoration: none;
+}
+
 
 @media (max-width:430px) {
     .title{
         font-size: 2rem;
     }
     .result{
-        font-size: 5rem;
+        font-size: 2rem;
     }
     .number-buttons div{
         font-size: 3.5rem;
@@ -141,6 +176,15 @@ body{
     }
     .top-buttons div{
         font-size: 2rem;
+    }
+    footer {
+        font-size: 1rem;
+        padding: 8px 0;
+        height: 50px
+    }
+    footer>p:first-child,
+    footer p {
+        margin: 5px 5px;
     }
 }
 

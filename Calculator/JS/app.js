@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 topButtons[0].children[0].className="fa-solid fa-delete-left fa-lg"
             }
             else{
-                  topButtons[0].children[0].className="fa-solid fa-c"
+                  topButtons[0].children[0].className="fa-solid fa-c fa-lg"
             }
     })
 
@@ -41,13 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Clear'ı kolaylaştırma kodları:
-
     let timer;
     topButtons[0].addEventListener("mousedown",()=>{
         clearTimeout(timer)
         timer=setTimeout(()=>{
             display.textContent="0";
-            topButtons[0].children[0].className="fa-solid fa-c"
+            topButtons[0].children[0].className="fa-solid fa-c fa-lg"
         }, 500)
     })
     topButtons[0].addEventListener("mouseup", ()=>{
@@ -56,6 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
     topButtons[0].addEventListener("mouseleave", ()=>{
         clearTimeout(timer)
     })
+
+    // Clear'ı kolaylaştırma kodları (Mobil için):
+     topButtons[0].addEventListener("touchstart", (e)=>{
+        e.preventDefault();
+        timer = setTimeout(()=>{
+            display.textContent="0";
+            topButtons[0].children[0].className="fa-solid fa-c fa-lg"
+        }, 500)
+     })
+     topButtons[0].addEventListener("touchend", ()=>{
+        clearTimeout(timer)
+     })
+      topButtons[0].addEventListener("touchmove", ()=>{
+        clearTimeout(timer)
+     })
 
     // Number-buttons js kodları: 
     numbers.forEach((button)=>{
@@ -78,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //Side-buttons js kodları:
-
     let calculation= []
     sideButtons[0].addEventListener("click",()=>{
         if(operatorValidation(display.textContent)){
@@ -112,11 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
     })
-     sideButtons[4].addEventListener("click",()=>{
-        display.textContent=calculate(display.textContent);
+    sideButtons[4].addEventListener("click",()=>{
+        let result= calculate(display.textContent);
+        if(result.length>11){
+            result = Number(result).toExponential(6);
+        }
+        display.textContent= result;
         display.nextElementSibling.style.display="flex"
     })
-    
-    
-  
 });
