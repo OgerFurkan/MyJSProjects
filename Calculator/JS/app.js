@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 
-
+    // Silme butonu için ikon değişimi:
     buttonWrapper.addEventListener("click",()=>{
          if(display.textContent.length>1){
                 topButtons[0].children[0].className="fa-solid fa-delete-left fa-lg"
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Clear'ı kolaylaştırma kodları (Mobil için):
      topButtons[0].addEventListener("touchstart", (e)=>{
-        e.preventDefault();
         timer = setTimeout(()=>{
             display.textContent="0";
             topButtons[0].children[0].className="fa-solid fa-c fa-lg"

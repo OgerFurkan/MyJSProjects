@@ -162,6 +162,9 @@ footer a{
 
 
 @media (max-width:430px) {
+    .calculator-wrapper{
+        margin-top: -55px;
+    }
     .title{
         font-size: 2rem;
     }
